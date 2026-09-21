@@ -1065,12 +1065,7 @@ body:has(.sidebar.admin-sidebar.collapsed) .main-content {
                     <i data-lucide="calendar-cog"></i>
                     <span class="admin-menu-text">จัดการการประชุม</span>
 
-                    <?php if ($adminSidebarStats['active_meetings'] > 0): ?>
-                    <!-- <span class="admin-menu-badge info"
-                        title="มีการประชุมที่ยังไม่ปิด <?= (int) $adminSidebarStats['active_meetings'] ?> รายการ">
-                        <?= $adminSidebarH($adminSidebarBadge($adminSidebarStats['active_meetings'])) ?>
-                    </span> -->
-                    <?php endif; ?>
+                
                 </a>
 
                 <a href="<?= $adminSidebarH($adminSidebarBaseUrl . 'admin/agenda/agendas.php') ?>"
