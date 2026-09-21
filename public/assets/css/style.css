@@ -1,0 +1,623 @@
+/* ==========================================================================
+   LOGIN PAGE — GOOGLE CALENDAR / GOOGLE WORKSPACE THEME
+   ========================================================================== */
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --google-blue: #1a73e8;
+    --google-blue-hover: #1765cc;
+    --google-blue-light: #e8f0fe;
+
+    --google-text: #202124;
+    --google-text-secondary: #5f6368;
+    --google-text-muted: #80868b;
+
+    --google-border: #dadce0;
+    --google-border-hover: #bdc1c6;
+
+    --google-bg: #ffffff;
+    --google-surface: #ffffff;
+    --google-surface-soft: #f8f9fa;
+    --google-hover: #f1f3f4;
+
+    --google-red: #d93025;
+}
+
+
+/* =========================
+   BODY
+========================= */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background: #ffffff;
+
+    opacity: 0;
+    animation: fadeIn .35s ease forwards;
+
+    font-family:
+        'Google Sans',
+        'Sarabun',
+        'Roboto',
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    font-weight: 400;
+    color: var(--google-text);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   LOGIN WRAPPER
+========================= */
+.login-wrapper {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px 20px;
+
+    background: #ffffff;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 36px 36px 34px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--google-border);
+    border-radius: 16px;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+
+    color: var(--google-text);
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+h1 {
+    margin: 0 0 6px;
+
+    text-align: center;
+
+    color: var(--google-text);
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+    margin: 0 0 28px;
+
+    text-align: center;
+
+    color: var(--google-text-secondary);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--google-text-secondary);
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--google-border);
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: var(--google-text);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+
+    box-shadow: none !important;
+
+    transition:
+        border-color .15s ease,
+        background-color .15s ease;
+}
+
+input::placeholder {
+    color: #9aa0a6;
+}
+
+input:hover {
+    border-color: var(--google-border-hover);
+}
+
+
+/* =========================
+   USERNAME / PASSWORD FOCUS
+========================= */
+.inputu:focus,
+.inputp:focus,
+input:focus {
+    border: 2px solid var(--google-blue);
+
+    padding-left: 13px;
+    padding-right: 13px;
+
+    box-shadow: none !important;
+}
+
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+.forgot-box {
+    margin-top: -2px;
+    margin-bottom: 20px;
+
+    text-align: right;
+}
+
+.small-link {
+    color: var(--google-blue);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color .15s ease;
+}
+
+.small-link:hover {
+    color: var(--google-blue-hover);
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+.buttonlogin {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 22px;
+
+    background: #ffcc00;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow: none !important;
+
+    transition:
+        background-color .15s ease,
+        transform .1s ease;
+}
+
+.buttonlogin:hover {
+    background: #333333;
+}
+
+.buttonlogin:active {
+    transform: scale(.99);
+}
+
+
+/* =========================
+   LOADING STATE
+========================= */
+.buttonlogin.loading {
+    background: #333333;
+
+    pointer-events: none;
+
+    opacity: .82;
+}
+
+
+/* =========================
+   SPINNER
+========================= */
+.spinner {
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+
+    display: none;
+
+    animation: spin .7s linear infinite;
+}
+
+button.loading .spinner {
+    display: block;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+.divider {
+    display: flex;
+    align-items: center;
+
+    margin: 20px 0;
+
+    color: var(--google-text-muted);
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+
+    flex: 1;
+
+    border-bottom: 1px solid var(--google-border);
+}
+
+.divider span {
+    padding: 0 12px;
+}
+
+
+/* =========================
+   GOOGLE LOGIN
+========================= */
+/* =========================
+   Google login wrapper
+========================= */
+.google-wrap {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 12px;
+}
+
+
+
+/* =========================
+   SWEETALERT
+========================= */
+.swal2-container {
+    z-index: 10000 !important;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 768px) {
+
+    .login-wrapper {
+        padding: 24px 18px;
+    }
+
+    .login-card {
+        max-width: 400px;
+
+        padding: 32px 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 480px) {
+
+    .login-wrapper {
+        align-items: center;
+
+        padding: 16px;
+    }
+
+    .login-card {
+        max-width: 100%;
+
+        padding: 26px 20px;
+
+        border-radius: 14px;
+    }
+
+    .logo {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 16px;
+    }
+
+    .logo img {
+        width: 62px;
+        height: 62px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+    }
+
+    input {
+        height: 46px;
+
+        font-size: 14px;
+    }
+
+    .buttonlogin {
+        height: 44px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 360px) {
+
+    .login-wrapper {
+        padding: 10px;
+    }
+
+    .login-card {
+        padding: 22px 16px;
+
+        border-radius: 12px;
+    }
+
+    .logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .logo img {
+        width: 56px;
+        height: 56px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        height: 44px;
+
+        font-size: 13px;
+    }
+
+    .small-link {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   SHORT HEIGHT SCREENS
+========================= */
+@media (max-height: 620px) and (min-width: 481px) {
+
+    .login-wrapper {
+        align-items: flex-start;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .login-card {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .logo {
+        width: 56px;
+        height: 56px;
+
+        margin-bottom: 12px;
+    }
+
+    .logo img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    .forgot-box {
+        margin-bottom: 16px;
+    }
+
+    .divider {
+        margin: 16px 0;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+
+    body,
+    .buttonlogin,
+    input,
+    .small-link {
+        animation: none;
+        transition: none;
+    }
+
+    body {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   FONT FACE (SARABUN)
+========================= */
+@font-face {
+    font-family: 'Sarabun';
+    src: url('../fonts/Sarabun-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Sarabun';
+    src: url('../fonts/Sarabun-Bold.ttf') format('truetype');
+    font-weight: 700;
+}

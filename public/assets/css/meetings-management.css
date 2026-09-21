@@ -1,0 +1,1486 @@
+/* ==========================================================================
+   🌐 MEETING MANAGEMENT TEMPLATE
+   Google Calendar / Material 3 Style
+   Shared UI Template — Based on User Management Page
+   ========================================================================== */
+
+
+/* ==========================================================================
+   [1] GLOBAL IMPORTS & VARIABLES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Sarabun:wght@400;500;600;700&display=swap');
+
+:root {
+    /* ---------- Google Colors ---------- */
+    --google-blue: #1a73e8;
+    --google-blue-hover: #1557b0;
+    --google-blue-light: #e8f0fe;
+
+    --google-gray-bg: #f8f9fa;
+    --google-gray-surface: #f1f3f4;
+
+    --google-border: #dadce0;
+    --google-border-hover: #bdc1c6;
+
+    --google-text-primary: #202124;
+    --google-text-secondary: #5f6368;
+    --google-text-muted: #80868b;
+
+    --google-red: #d93025;
+    --google-red-hover: #b31412;
+
+    --google-green: #137333;
+    --google-green-bg: #e6f4ea;
+
+    --google-yellow: #b06000;
+    --google-yellow-bg: #fef7e0;
+
+    --google-purple: #8430ce;
+    --google-purple-bg: #f3e8fd;
+
+    --google-red-bg: #fce8e6;
+
+
+    /* ---------- Spacing ---------- */
+    --space-2xs: 4px;
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+
+    /* ---------- Radius ---------- */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-pill: 999px;
+}
+
+
+/* ==========================================================================
+   [2] GLOBAL RESET
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+    background: #ffffff !important;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+    font-family:
+        'Google Sans',
+        'Sarabun',
+        'Roboto',
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    color: var(--google-text-primary);
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* ==========================================================================
+   [3] MAIN STRUCTURE
+   ========================================================================== */
+
+.main-content {
+    margin-left: 268px;
+    width: calc(100% - 268px);
+
+    min-width: 0;
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    transition:
+        margin-left .25s cubic-bezier(0.4, 0, 0.2, 1),
+        width .25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-content.expanded {
+    margin-left: 74px;
+    width: calc(100% - 74px);
+}
+
+.content-wrapper {
+    width: 100%;
+    padding: var(--space-xl);
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* ==========================================================================
+   [4] HEADER
+   ========================================================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 64px;
+    min-height: 64px;
+
+    padding: 0 var(--space-xl);
+
+    border-bottom: 1px solid var(--google-border);
+    background: #ffffff;
+
+    gap: var(--space-md);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    min-width: 0;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.header-left h2 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+
+    color: var(--google-text-primary);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-subtitle {
+    margin: 2px 0 0;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    color: var(--google-text-secondary);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   [5] SIDEBAR
+   ========================================================================== */
+
+.sidebar,
+.main-sidebar,
+aside {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 268px;
+    height: 100vh;
+
+    background: #ffffff !important;
+
+    border-right: 1px solid var(--google-border) !important;
+
+    overflow-y: auto;
+
+    z-index: 900;
+}
+
+.sidebar a,
+.main-sidebar a,
+aside nav a {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-md);
+
+    padding: 0 var(--space-lg);
+
+    height: 48px;
+
+    color: var(--google-text-secondary) !important;
+
+    border-radius: 0 24px 24px 0 !important;
+
+    margin-right: var(--space-md);
+    margin-top: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background-color .2s ease,
+        color .2s ease;
+}
+
+.sidebar a:hover,
+.main-sidebar a:hover,
+aside nav a:hover {
+    background: var(--google-gray-bg) !important;
+    color: var(--google-text-primary) !important;
+}
+
+.sidebar a.active,
+.main-sidebar a.active,
+aside nav a.active {
+    background: var(--google-blue-light) !important;
+    color: var(--google-blue) !important;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   [6] HEADER / ICON BUTTON
+   ========================================================================== */
+
+.toggle-btn,
+.modal-close {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+    min-height: 40px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--google-text-secondary);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: none !important;
+
+    transition:
+        background-color .2s ease,
+        color .2s ease;
+}
+
+.toggle-btn:hover,
+.modal-close:hover {
+    background: var(--google-gray-surface);
+    color: var(--google-text-primary);
+}
+
+.toggle-btn svg,
+.toggle-btn i {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+
+/* ==========================================================================
+   [7] ADD MEETING BUTTON
+   ========================================================================== */
+
+.btn-add {
+    height: 44px;
+
+    padding: 0 var(--space-lg);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-xs);
+
+    background: var(--google-blue);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 22px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    box-shadow: none !important;
+
+    transition:
+        background-color .2s ease;
+}
+
+.btn-add:hover {
+    background: var(--google-blue-hover);
+}
+
+.btn-add svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ==========================================================================
+   [8] FILTER CARD
+   ========================================================================== */
+
+.filter-card {
+    background: #ffffff;
+
+    border: 1px solid var(--google-border);
+
+    border-radius: 16px;
+
+    padding: var(--space-xl);
+
+    margin-bottom: var(--space-xl);
+
+    box-shadow: none;
+}
+
+.filter-card h3 {
+    margin-bottom: var(--space-lg);
+
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-xs);
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: var(--google-text-primary);
+}
+
+.filter-card h3 svg {
+    width: 20px;
+    height: 20px;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-lg);
+
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-xs);
+
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group.search-group,
+.search-group {
+    flex: 2;
+    min-width: 250px;
+}
+
+.form-group label,
+.filter-card .form-group label {
+    font-size: 14px;
+
+    color: var(--google-text-secondary);
+
+    font-weight: 500;
+}
+
+
+/* ==========================================================================
+   [9] FORM CONTROLS
+   ========================================================================== */
+
+.form-control,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid var(--google-border);
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    color: var(--google-text-primary);
+
+    background-color: #ffffff;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color .2s ease,
+        background-color .2s ease;
+}
+
+.form-control,
+.form-group input,
+.form-group select {
+    height: 48px;
+
+    padding: 0 var(--space-md);
+}
+
+.form-group textarea {
+    min-height: 110px;
+
+    padding:
+        var(--space-sm)
+        var(--space-md);
+
+    resize: vertical;
+}
+
+.form-control::placeholder,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa0a6;
+}
+
+.form-control:hover,
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: var(--google-border-hover);
+}
+
+.form-control:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: var(--google-blue);
+
+    border-width: 2px;
+
+    padding-left: calc(var(--space-md) - 1px);
+    padding-right: calc(var(--space-md) - 1px);
+
+    box-shadow: none !important;
+}
+
+
+/* Select */
+
+.form-group select {
+    cursor: pointer;
+
+    appearance: none;
+
+    padding-right: 40px;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 96 960 960' width='24' fill='%235F6368'%3E%3Cpath d='M480 711 240 471l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+
+/* ==========================================================================
+   [10] FILTER BUTTONS
+   ========================================================================== */
+
+.filter-actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.btn-search,
+.btn-clear {
+    height: 48px;
+
+    padding: 0 var(--space-xl);
+
+    border-radius: 24px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-xs);
+
+    box-shadow: none !important;
+}
+
+.btn-search {
+    border: none;
+
+    background: var(--google-blue);
+    color: #ffffff;
+}
+
+.btn-search:hover {
+    background: var(--google-blue-hover);
+}
+
+.btn-clear {
+    border: 1px solid var(--google-border);
+
+    background: #ffffff;
+
+    color: var(--google-blue);
+
+    text-decoration: none;
+}
+
+.btn-clear:hover {
+    background: var(--google-blue-light);
+
+    border-color: transparent;
+}
+
+
+/* ==========================================================================
+   [11] MEETING TABLE
+   ========================================================================== */
+
+.table-card {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid var(--google-border);
+
+    border-radius: 12px;
+
+    margin-bottom: var(--space-xl);
+
+    box-shadow: none !important;
+}
+
+.table-responsive {
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-card table {
+    width: 100%;
+
+    min-width: 1050px;
+
+    border-collapse: collapse;
+}
+
+.table-card th,
+.table-card td {
+    padding:
+        var(--space-md)
+        var(--space-lg);
+
+    text-align: left;
+
+    border-bottom: 1px solid #f1f3f4;
+
+    white-space: nowrap;
+
+    vertical-align: middle;
+
+    font-size: 14px;
+}
+
+.table-card th {
+    background: var(--google-gray-bg) !important;
+
+    color: var(--google-text-secondary);
+
+    border-bottom: 1px solid var(--google-border);
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: .05em;
+
+    text-transform: uppercase;
+}
+
+.table-card td {
+    background: #ffffff;
+
+    color: var(--google-text-primary);
+}
+
+.table-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-card tbody tr:hover td {
+    background: var(--google-gray-bg);
+}
+
+
+/* ==========================================================================
+   [12] MEETING TITLE
+   ========================================================================== */
+
+.meeting-title {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    min-width: 240px;
+}
+
+.meeting-title strong {
+    display: block;
+
+    max-width: 280px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    font-weight: 600;
+}
+
+.meeting-title small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--google-text-muted);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================================
+   [13] MEETING ICON
+   ========================================================================== */
+
+.meeting-icon {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    border-radius: 50%;
+
+    background: var(--google-blue-light);
+
+    color: var(--google-blue);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meeting-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ==========================================================================
+   [14] STATUS BADGES
+   ========================================================================== */
+
+.status-badge {
+    padding:
+        var(--space-2xs)
+        var(--space-sm);
+
+    min-height: 28px;
+
+    border-radius: 16px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+}
+
+.status-scheduled {
+    background: var(--google-blue-light);
+    color: var(--google-blue);
+}
+
+.status-ongoing {
+    background: var(--google-yellow-bg);
+    color: var(--google-yellow);
+}
+
+.status-completed {
+    background: var(--google-green-bg);
+    color: var(--google-green);
+}
+
+.status-cancelled {
+    background: var(--google-red-bg);
+    color: var(--google-red);
+}
+
+.status-default {
+    background: var(--google-gray-surface);
+    color: var(--google-text-secondary);
+}
+
+
+/* ==========================================================================
+   [15] ACTION BUTTONS
+   ========================================================================== */
+
+.action-buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: var(--space-xs);
+}
+
+.action-buttons button,
+.action-buttons a {
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition:
+        background-color .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+
+    box-shadow: none !important;
+}
+
+.action-buttons svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-view {
+    background: #ffffff;
+
+    color: var(--google-text-secondary);
+
+    border: 1px solid var(--google-border);
+}
+
+.btn-view:hover {
+    background: var(--google-gray-surface);
+
+    border-color: transparent;
+
+    color: var(--google-text-primary);
+}
+
+.btn-edit {
+    background: #ffffff;
+
+    color: var(--google-blue);
+
+    border: 1px solid var(--google-border);
+}
+
+.btn-edit:hover {
+    background: var(--google-blue-light);
+
+    border-color: transparent;
+}
+
+.btn-delete {
+    background: #ffffff;
+
+    color: var(--google-red);
+
+    border: 1px solid var(--google-border);
+}
+
+.btn-delete:hover {
+    background: var(--google-red-bg);
+
+    border-color: transparent;
+}
+
+
+/* ==========================================================================
+   [16] EMPTY STATE
+   ========================================================================== */
+
+.empty-state {
+    min-height: 280px;
+
+    padding: 48px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: var(--space-md);
+
+    border-radius: 50%;
+
+    background: var(--google-blue-light);
+
+    color: var(--google-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.empty-state h4 {
+    margin-bottom: 6px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.empty-state p {
+    margin-bottom: var(--space-lg);
+
+    color: var(--google-text-secondary);
+
+    font-size: 14px;
+}
+
+.btn-empty-add {
+    min-height: 40px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: var(--google-blue);
+
+    color: #ffffff;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: var(--space-xs);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.btn-empty-add:hover {
+    background: var(--google-blue-hover);
+}
+
+
+/* ==========================================================================
+   [17] PAGINATION
+   ========================================================================== */
+
+.pagination-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--space-xs);
+
+    margin-top: var(--space-xl);
+
+    background: #ffffff;
+}
+
+.pagination-link {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    color: var(--google-text-secondary);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border: none;
+
+    transition:
+        background-color .2s ease,
+        color .2s ease;
+}
+
+.pagination-link:hover {
+    background: var(--google-gray-surface);
+}
+
+.pagination-link.active {
+    background: var(--google-blue-light);
+
+    color: var(--google-blue);
+
+    font-weight: 700;
+}
+
+.pagination-link.disabled {
+    opacity: .35;
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================================
+   [18] MODAL
+   ========================================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(32, 33, 36, .4);
+
+    backdrop-filter: blur(2px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity .25s ease;
+
+    z-index: 1000;
+}
+
+.modal.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.modal-box {
+    width: 92%;
+
+    max-width: 680px;
+
+    max-height: 90vh;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border: none;
+
+    transform: scale(.95);
+
+    transition:
+        transform .25s cubic-bezier(0, 0, .2, 1);
+
+    box-shadow:
+        0 11px 15px -7px rgba(0, 0, 0, .2),
+        0 24px 38px 3px rgba(0, 0, 0, .14);
+}
+
+.modal.show .modal-box {
+    transform: scale(1);
+}
+
+
+/* ==========================================================================
+   [19] MODAL HEADER
+   ========================================================================== */
+
+.modal-header {
+    padding:
+        var(--space-xl)
+        var(--space-xl)
+        var(--space-md);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: var(--space-md);
+}
+
+.modal-header h3 {
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    color: var(--google-text-primary);
+}
+
+.modal-header p {
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    color: var(--google-text-secondary);
+}
+
+
+/* ==========================================================================
+   [20] MODAL FORM
+   ========================================================================== */
+
+.modal-form-body {
+    padding:
+        0
+        var(--space-xl)
+        var(--space-xl);
+
+    overflow-y: auto;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-md);
+
+    background: #ffffff;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-md);
+}
+
+.modal-form-body > .form-group {
+    margin-bottom: var(--space-md);
+}
+
+.modal-form-body > .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.required {
+    color: var(--google-red);
+}
+
+
+/* ==========================================================================
+   [21] MODAL ACTIONS
+   ========================================================================== */
+
+.modal-actions {
+    padding:
+        var(--space-md)
+        var(--space-xl);
+
+    background: #ffffff;
+
+    border-top: 1px solid var(--google-border);
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: var(--space-sm);
+}
+
+.modal-actions button,
+.btn-save,
+.btn-cancel {
+    height: 48px;
+
+    padding: 0 var(--space-xl);
+
+    border-radius: 24px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: var(--space-xs);
+
+    transition:
+        background-color .2s ease,
+        border-color .2s ease;
+
+    box-shadow: none !important;
+}
+
+.btn-save {
+    background: var(--google-blue);
+
+    color: #ffffff;
+
+    border: none;
+}
+
+.btn-save:hover {
+    background: var(--google-blue-hover);
+}
+
+.btn-cancel {
+    background: #ffffff;
+
+    color: var(--google-blue);
+
+    border: 1px solid var(--google-border);
+}
+
+.btn-cancel:hover {
+    background: var(--google-blue-light);
+
+    border-color: transparent;
+}
+
+
+/* ==========================================================================
+   [22] SCROLLBAR
+   ========================================================================== */
+
+.table-responsive::-webkit-scrollbar,
+.modal-form-body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track,
+.modal-form-body::-webkit-scrollbar-track {
+    background: var(--google-gray-bg);
+}
+
+.table-responsive::-webkit-scrollbar-thumb,
+.modal-form-body::-webkit-scrollbar-thumb {
+    background: var(--google-border-hover);
+
+    border-radius: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover,
+.modal-form-body::-webkit-scrollbar-thumb:hover {
+    background: var(--google-text-secondary);
+}
+
+
+/* ==========================================================================
+   [23] RESPONSIVE — TABLET
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        gap: var(--space-sm);
+
+        padding:
+            0
+            var(--space-md);
+    }
+
+    .header-subtitle {
+        display: none;
+    }
+
+    .content-wrapper {
+        padding: var(--space-lg);
+    }
+}
+
+
+/* ==========================================================================
+   [24] RESPONSIVE — MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar,
+    .main-sidebar,
+    aside {
+        transform: translateX(-100%);
+
+        transition:
+            transform .3s ease;
+    }
+
+    .main-content,
+    .main-content.expanded {
+        margin-left: 0 !important;
+
+        width: 100% !important;
+    }
+
+    .content-wrapper {
+        padding: var(--space-md);
+    }
+
+    .header {
+        min-height: 64px;
+
+        padding:
+            10px
+            var(--space-sm);
+    }
+
+    .header-left {
+        gap: var(--space-xs);
+    }
+
+    .header-left h2 {
+        max-width: 150px;
+
+        font-size: 16px;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+    .btn-add {
+        height: 40px;
+
+        padding:
+            0
+            var(--space-md);
+
+        font-size: 14px;
+    }
+
+    .filter-card {
+        padding: var(--space-lg);
+    }
+
+    .filter-form {
+        gap: var(--space-md);
+    }
+
+    .form-group,
+    .form-group.search-group,
+    .search-group {
+        width: 100%;
+
+        min-width: 100%;
+    }
+
+    .filter-actions {
+        width: 100%;
+    }
+
+    .btn-search,
+    .btn-clear {
+        flex: 1;
+
+        justify-content: center;
+    }
+
+    .modal {
+        padding: var(--space-sm);
+    }
+
+    .modal-box {
+        width: 95%;
+
+        border-radius: 20px;
+    }
+
+    .modal-header,
+    .modal-form-body,
+    .modal-actions {
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        width: 100%;
+
+        justify-content: center;
+    }
+}
+
+
+/* ==========================================================================
+   [25] RESPONSIVE — SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .content-wrapper {
+        padding: var(--space-xs);
+    }
+
+    .header-left h2 {
+        display: none;
+    }
+
+    .btn-add {
+        height: 38px;
+
+        padding:
+            0
+            var(--space-sm);
+
+        font-size: 13px;
+    }
+
+    .filter-card {
+        padding: var(--space-md);
+
+        border-radius: 12px;
+    }
+
+    .table-card {
+        border-radius: 10px;
+    }
+
+    .modal-box {
+        border-radius: 18px;
+    }
+}

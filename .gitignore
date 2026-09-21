@@ -1,0 +1,29 @@
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# Backup / temporary
+_path_backup_before_fix/
+fix_paths_once.php
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# User uploaded files
+uploads/
+public/uploads/*
+!public/uploads/.htaccess
+!public/uploads/avatars/.htaccess
+!public/uploads/meetings/.htaccess

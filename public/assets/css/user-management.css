@@ -1,0 +1,796 @@
+/* ==========================================================================
+   🌐 [1. GLOBAL IMPORTS & VARIABLES - GOOGLE CALENDAR (MATERIAL 3)]
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Sarabun:wght@400;500;600;700&display=swap');
+
+:root {
+    --google-blue: #1a73e8;
+    --google-blue-hover: #1557b0;
+    --google-blue-light: #e8f0fe;
+    --google-gray-bg: #f8f9fa;
+    --google-gray-surface: #f1f3f4;
+    --google-border: #dadce0;
+    --google-border-hover: #bdc1c6;
+    --google-text-primary: #202124;
+    --google-text-secondary: #5f6368;
+    --google-red: #d93025;
+    --google-red-hover: #b31412;
+    --google-green: #1e8e3e;
+    
+    --space-2xs: 4px;
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #ffffff !important;
+    min-height: 100vh;
+}
+
+body, input, select, textarea, button {
+    font-family: 'Google Sans', 'Sarabun', 'Roboto', -apple-system, sans-serif;
+    color: var(--google-text-primary);
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   🌐 [2. MAIN STRUCTURE, HEADER & SIDEBAR]
+   ========================================================================== */
+.main-content {
+    margin-left: 268px;
+    width: calc(100% - 268px);
+    min-width: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #ffffff;
+    transition: margin-left .25s cubic-bezier(0.4, 0, 0.2, 1), width .25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-content.expanded {
+    margin-left: 74px;
+    width: calc(100% - 74px);
+}
+
+.content-wrapper {
+    width: 100%;
+    padding: var(--space-xl);
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 64px;
+    min-height: 64px;
+
+    padding: 0 var(--space-xl);
+
+    border-bottom: 1px solid var(--google-border);
+    background: #ffffff;
+
+    gap: var(--space-md);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    min-width: 0;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.header-left h2 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+
+    color: var(--google-text-primary);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-subtitle {
+    margin: 2px 0 0;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    color: var(--google-text-secondary);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    flex-shrink: 0;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--google-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+    box-shadow: none !important;
+}
+
+.toggle-btn:hover {
+    background-color: var(--google-gray-surface);
+}
+
+#searchInput {
+    padding: 0 var(--space-md);
+    height: 44px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 280px;
+    background-color: var(--google-gray-bg);
+    transition: all 0.2s ease;
+}
+
+#searchInput:focus {
+    background-color: #ffffff;
+    border-color: var(--google-border);
+    box-shadow: none !important;
+    outline: none;
+}
+
+/* Sidebar (Navigation Drawer) */
+.sidebar, .main-sidebar, aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 268px;
+    height: 100vh;
+    background-color: #ffffff !important;
+    border-right: 1px solid var(--google-border) !important;
+    overflow-y: auto;
+    z-index: 900;
+}
+
+.sidebar a, .main-sidebar a, aside nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 0 var(--space-lg);
+    height: 48px;
+    color: var(--google-text-secondary) !important;
+    border-radius: 0 24px 24px 0 !important;
+    margin-right: var(--space-md);
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar a:hover, .main-sidebar a:hover, aside nav a:hover {
+    background-color: var(--google-gray-bg) !important;
+    color: var(--google-text-primary) !important;
+}
+
+.sidebar a.active, .main-sidebar a.active, aside nav a.active {
+    background-color: var(--google-blue-light) !important;
+    color: var(--google-blue) !important;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   📊 [3. TABLE CARD & BADGES]
+   ========================================================================== */
+.table-card {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--google-border);
+    box-shadow: none !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+.table-card th,
+.table-card td {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    border-bottom: 1px solid #f1f3f4;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.table-card th {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--google-text-secondary);
+    background-color: var(--google-gray-bg) !important;
+    border-bottom: 1px solid var(--google-border);
+}
+
+.table-card td {
+    color: var(--google-text-primary);
+    background-color: #ffffff;
+}
+
+.table-card tr:hover td {
+    background-color: var(--google-gray-bg);
+}
+
+.table-card td img, 
+.user-avatar img {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.table-card::-webkit-scrollbar {
+    height: 10px;
+}
+.table-card::-webkit-scrollbar-track {
+    background: var(--google-gray-bg);
+    border-radius: 0 0 12px 12px;
+}
+.table-card::-webkit-scrollbar-thumb {
+    background: var(--google-border-hover);
+    border-radius: 8px;
+    border: 2px solid var(--google-gray-bg);
+}
+.table-card::-webkit-scrollbar-thumb:hover {
+    background: var(--google-text-secondary);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.status-active { background-color: #e6f4ea; color: #137333; }
+.status-pending { background-color: #fef7e0; color: #b06000; }
+.status-inactive { background-color: var(--google-gray-surface); color: var(--google-text-secondary); }
+
+/* Role Badges */
+.role-badge {
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.role-admin { background-color: #f3e8fd; color: #8430ce; }
+.role-member { background-color: var(--google-blue-light); color: var(--google-blue); }
+.role-executive { background-color: #fce8e6; color: #c5221f; }
+.role-department { background-color: #e6f4ea; color: #137333; }
+
+/* Action Buttons & Add Button (เอาเงาออกทั้งหมด) */
+.action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.action-buttons button, .action-buttons a {
+    height: 36px;
+    padding: 0 var(--space-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none !important;
+}
+
+.btn-edit {
+    background-color: #ffffff !important;
+    color: var(--google-blue) !important;
+    border: 1px solid var(--google-border) !important;
+}
+
+.btn-edit:hover {
+    background-color: var(--google-blue-light) !important;
+    border-color: transparent !important;
+}
+
+.btn-delete {
+    background-color: #ffffff !important;
+    color: var(--google-red) !important;
+    border: 1px solid var(--google-border) !important;
+}
+
+.btn-delete:hover {
+    background-color: #fce8e6 !important;
+    border-color: transparent !important;
+}
+
+.btn-add {
+    height: 44px;
+    padding: 0 var(--space-lg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    background: var(--google-blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    flex-shrink: 0;
+    box-shadow: none !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-add:hover {
+    background: var(--google-blue-hover);
+}
+
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-xl);
+    background: #ffffff;
+}
+
+.pagination-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--google-text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.pagination-link:hover {
+    background-color: var(--google-gray-surface);
+}
+
+.pagination-link.active {
+    background-color: var(--google-blue-light);
+    color: var(--google-blue);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   🔍 [4. FILTER CARD & CONTROLS]
+   ========================================================================== */
+.filter-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--google-border);
+    box-shadow: none;
+}
+
+.filter-card h3 {
+    margin-bottom: var(--space-lg);
+    font-size: 18px;
+    color: var(--google-text-primary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group.search-group {
+    flex: 2;
+    min-width: 250px;
+}
+
+.form-group label,
+.filter-card .form-group label {
+    font-size: 14px;
+    color: var(--google-text-secondary);
+    font-weight: 500;
+}
+
+.form-control,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    height: 48px;
+    padding: 0 var(--space-md);
+    border: 1px solid var(--google-border);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--google-text-primary);
+    background-color: #ffffff;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control::placeholder {
+    color: #9aa0a6;
+}
+
+.form-control:hover,
+.form-group input:hover,
+.form-group select:hover {
+    border-color: var(--google-border-hover);
+}
+
+.form-control:focus,
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--google-blue);
+    border-width: 2px;
+    padding: 0 calc(var(--space-md) - 1px);
+    box-shadow: none !important;
+}
+
+.filter-card .form-group select.form-control,
+.form-group select {
+    padding-right: 40px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 96 960 960' width='24' fill='%255F6368'%3E%3Cpath d='M480 711 240 471l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.filter-actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.btn-search {
+    height: 48px;
+    padding: 0 var(--space-xl);
+    background: var(--google-blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    box-shadow: none !important;
+}
+
+.btn-search:hover { background: var(--google-blue-hover); }
+
+.btn-clear {
+    height: 48px;
+    padding: 0 var(--space-xl);
+    background: #ffffff;
+    color: var(--google-blue);
+    border: 1px solid var(--google-border);
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    box-shadow: none !important;
+}
+
+.btn-clear:hover {
+    background: var(--google-blue-light);
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   ✨ [5. MODAL DIALOG & FORMS]
+   ========================================================================== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 33, 36, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1000;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background-color: #ffffff;
+    width: 92%;
+    max-width: 560px;
+    max-height: 90vh;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.95);
+    transition: transform 0.25s cubic-bezier(0.0, 0.0, 0.2, 1);
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,0.2), 0 24px 38px 3px rgba(0,0,0,0.14) !important;
+}
+
+.modal.show .modal-box {
+    transform: scale(1);
+}
+
+.modal-box h3 {
+    padding: var(--space-xl) var(--space-xl) var(--space-md) var(--space-xl);
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--google-text-primary);
+}
+
+.modal-form-body {
+    padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    background: #ffffff;
+}
+
+.modal-actions {
+    padding: var(--space-md) var(--space-xl);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+}
+
+/* ปุ่มใน Modal เอาเงาออกทั้งหมด */
+.modal-actions button,
+.modal-actions .btn-save,
+.modal-actions .btn-cancel {
+    height: 48px;
+    padding: 0 var(--space-xl);
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+
+.modal-actions button.btn-save {
+    background-color: var(--google-blue);
+    color: #ffffff;
+    border: none;
+}
+
+.modal-actions button.btn-save:hover {
+    background-color: var(--google-blue-hover);
+}
+
+.modal-actions button.btn-cancel {
+    background-color: #ffffff;
+    color: var(--google-blue);
+    border: 1px solid var(--google-border);
+}
+
+.modal-actions button.btn-cancel:hover {
+    background-color: var(--google-blue-light);
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   📸 อัปโหลดรูปโปรไฟล์ (รวมวงกลมให้เป็นชิ้นเดียวกัน ไม่ซ้อนทับ)
+   ========================================================================== */
+.avatar-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--google-gray-bg);
+    border: 2px dashed var(--google-border-hover);
+    border-radius: 20px;
+    padding: var(--space-lg);
+    min-height: 150px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+
+.avatar-upload-wrapper:hover,
+.avatar-upload-wrapper.dragover {
+    border-color: var(--google-blue);
+    background-color: var(--google-blue-light);
+}
+
+/* ป้องกันการซ้อนทับของกรอบวงกลม โดยจัดให้ Container ของพรีวิวเป็นรูปวงกลมเดี่ยว */
+.avatar-preview-container {
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    background-color: #ffffff;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-xs) auto !important;
+    border: 2px solid var(--google-border);
+}
+
+/* รูปภาพภายในพรีวิวเต็มวงกลมพอดี */
+.avatar-preview-container img,
+.avatar-upload-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   📱 [6. RESPONSIVE MEDIA QUERIES]
+   ========================================================================== */
+@media (max-width: 900px) {
+    .header-subtitle { display: none; }
+
+    .header { 
+        gap: var(--space-sm); 
+        flex-wrap: nowrap; 
+        height: 64px; 
+        padding: 0 var(--space-md); 
+    }
+    
+    .header-left h2 { 
+        font-size: 16px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+    #searchInput { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .sidebar, .main-sidebar, aside { transform: translateX(-100%); transition: transform 0.3s ease; }
+    .main-content, .main-content.expanded { margin-left: 0 !important; width: 100% !important; }
+    .content-wrapper { padding: var(--space-md); }
+    
+    .header {
+        padding: 0 var(--space-sm);
+    }
+    .header-left {
+        gap: var(--space-xs);
+    }
+    .header-left h2 {
+        font-size: 14px;
+        max-width: 120px;
+    }
+    .btn-add {
+        height: 38px;
+        padding: 0 var(--space-md);
+        font-size: 13px;
+        border-radius: 19px;
+        min-width: unset;
+    }
+
+    .filter-actions { width: 100%; }
+    .btn-search, .btn-clear { flex: 1; justify-content: center; }
+    .modal-box { width: 95%; border-radius: 20px; }
+    .modal-actions { flex-direction: column-reverse; gap: var(--space-xs); }
+    .modal-actions button { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .header-left h2 { display: none; }
+    .content-wrapper { padding: var(--space-xs); }
+    .btn-add {
+        font-size: 13px;
+        padding: 0 var(--space-sm);
+    }
+}
