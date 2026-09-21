@@ -63,7 +63,7 @@ $pmProjectBase = $pmAppPosition !== false
     ? substr($pmScriptPath, 0, $pmAppPosition)
     : rtrim((string) BASE_URL, '/');
 $pmProjectBase = rtrim($pmProjectBase, '/');
-$pmUpdateUrl = $pmProjectBase . '/app/controllers/update_profile.php';
+$pmUpdateUrl = $pmProjectBase . '/app/controllers/Update_profile.php';
 
 $pmPicture = trim((string) $pmProfile['picture']);
 $pmAvatarUrl = '';
