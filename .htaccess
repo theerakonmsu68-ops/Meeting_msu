@@ -1,6 +1,7 @@
-# User uploaded files
-uploads/
-public/uploads/*
-!public/uploads/.htaccess
-!public/uploads/avatars/.htaccess
-!public/uploads/meetings/.htaccess
+<FilesMatch "\.sql$">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+
+RewriteRule ^\.history(?:/|$) - [F,L]
