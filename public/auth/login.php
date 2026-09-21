@@ -332,7 +332,7 @@ echo $alertScript;
             ====================================================== -->
             <div
                 id="g_id_onload"
-                data-client_id="218704445431-4p55g8sr01hj7oq1704hcd7prnv0udfk.apps.googleusercontent.com"
+                data-client_id="<?= htmlspecialchars(GOOGLE_CLIENT_ID, ENT_QUOTES, 'UTF-8') ?>"
                 data-callback="handleCredentialResponse"
                 data-auto_prompt="false"
                 data-use_fedcm_for_prompt="false"
