@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!-- <?php
+=======
+<?php
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 /*
 |--------------------------------------------------------------------------
 | TEMPLATE : จัดการการประชุม
@@ -312,4 +316,8 @@ include_once __DIR__ . '/../../../app/views/layouts/sidebar_admin.php';
 <?php
 include_once __DIR__ . '/../../../app/views/components/profile_modal.php';
 include_once __DIR__ . '/../../../app/views/layouts/footer.php';
+<<<<<<< HEAD
 ?> -->
+=======
+?>
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7

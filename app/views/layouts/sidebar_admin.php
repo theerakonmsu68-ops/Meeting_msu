@@ -248,6 +248,7 @@ $adminSidebarOwnProfileUrl =
     --gcal-red-hover: #fce8e6;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    GLOBAL
@@ -273,11 +274,28 @@ $adminSidebarOwnProfileUrl =
     position: fixed;
     inset: 0 auto 0 0;
 
+=======
+.sidebar.admin-sidebar,
+.sidebar.admin-sidebar * {
+    box-sizing: border-box;
+    font-family: 'Google Sans', 'Sarabun', 'Roboto', Arial, sans-serif;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+.sidebar.admin-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     z-index: 900;
 
     width: 268px;
     height: 100vh;
+<<<<<<< HEAD
     height: 100dvh;
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     display: flex;
     flex-direction: column;
@@ -286,7 +304,10 @@ $adminSidebarOwnProfileUrl =
 
     background: var(--gcal-bg) !important;
     border-right: 1px solid var(--gcal-border) !important;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     box-shadow: none !important;
 
     color: var(--gcal-text);
@@ -296,15 +317,19 @@ $adminSidebarOwnProfileUrl =
         transform .2s cubic-bezier(.4, 0, .2, 1);
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    COLLAPSED DESKTOP
    ========================================================= */
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .sidebar.admin-sidebar.collapsed {
     width: 74px;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    BRAND HEADER
@@ -314,11 +339,22 @@ $adminSidebarOwnProfileUrl =
     height: 64px;
     min-height: 64px;
 
+=======
+/* =========================================================
+   BRAND HEADER
+   ========================================================= */
+.admin-sidebar .sidebar-header {
+    height: 64px;
+    min-height: 64px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     padding: 0 16px;
 
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     gap: 12px;
 
     flex: 0 0 auto;
@@ -327,11 +363,17 @@ $adminSidebarOwnProfileUrl =
     border-bottom: 1px solid var(--gcal-border);
 }
 
+<<<<<<< HEAD
 
 .admin-sidebar-logo {
     width: 36px;
     height: 36px;
 
+=======
+.admin-sidebar-logo {
+    width: 36px;
+    height: 36px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     flex: 0 0 36px;
 
     display: grid;
@@ -342,6 +384,7 @@ $adminSidebarOwnProfileUrl =
 
     background: transparent;
     color: var(--gcal-blue);
+<<<<<<< HEAD
 
     cursor: pointer;
 }
@@ -394,10 +437,44 @@ $adminSidebarOwnProfileUrl =
 
     color: var(--gcal-text-secondary);
 
+=======
+}
+
+.admin-sidebar-logo svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.9;
+}
+
+.admin-sidebar-brand {
+    min-width: 0;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.admin-sidebar-brand strong,
+.admin-sidebar-brand span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-sidebar-brand strong {
+    color: var(--gcal-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.admin-sidebar-brand span {
+    margin-top: 2px;
+    color: var(--gcal-text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 11px;
     font-weight: 400;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    MOBILE CLOSE BUTTON
@@ -407,6 +484,11 @@ $adminSidebarOwnProfileUrl =
     width: 36px;
     height: 36px;
 
+=======
+.admin-sidebar-mobile-close {
+    width: 36px;
+    height: 36px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     margin-left: auto;
 
     display: none;
@@ -421,20 +503,32 @@ $adminSidebarOwnProfileUrl =
     color: var(--gcal-icon);
 
     cursor: pointer;
+<<<<<<< HEAD
 
     box-shadow: none !important;
 }
 
 
+=======
+    box-shadow: none !important;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar-mobile-close:hover {
     background: var(--gcal-hover);
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    PROFILE
    ========================================================= */
 
+=======
+/* =========================================================
+   PROFILE
+   ========================================================= */
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-profile-card {
     width: auto !important;
     min-height: 58px;
@@ -444,7 +538,10 @@ $adminSidebarOwnProfileUrl =
 
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     gap: 10px;
 
     overflow: hidden;
@@ -459,6 +556,7 @@ $adminSidebarOwnProfileUrl =
     text-decoration: none;
 
     cursor: pointer;
+<<<<<<< HEAD
 
     box-shadow: none !important;
 
@@ -467,10 +565,18 @@ $adminSidebarOwnProfileUrl =
 }
 
 
+=======
+    box-shadow: none !important;
+
+    transition: background-color .15s ease;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-profile-card:hover {
     background: var(--gcal-hover) !important;
 }
 
+<<<<<<< HEAD
 
 .admin-avatar-wrap {
     position: relative;
@@ -479,12 +585,22 @@ $adminSidebarOwnProfileUrl =
 }
 
 
+=======
+.admin-avatar-wrap {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-avatar {
     width: 36px;
     height: 36px;
 
     display: block;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     object-fit: cover;
 
     border: 0;
@@ -493,16 +609,24 @@ $adminSidebarOwnProfileUrl =
     background: var(--gcal-hover);
 }
 
+<<<<<<< HEAD
 
 .admin-notification-dot {
     position: absolute;
 
+=======
+.admin-notification-dot {
+    position: absolute;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     top: -2px;
     right: -3px;
 
     min-width: 15px;
     height: 15px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     padding: 0 4px;
 
     display: inline-flex;
@@ -517,6 +641,7 @@ $adminSidebarOwnProfileUrl =
 
     font-size: 8px;
     font-weight: 600;
+<<<<<<< HEAD
 
     line-height: 1;
 }
@@ -535,32 +660,62 @@ $adminSidebarOwnProfileUrl =
 
     overflow: hidden;
 
+=======
+    line-height: 1;
+}
+
+.admin-profile-copy {
+    min-width: 0;
+    flex: 1;
+}
+
+.admin-profile-name,
+.admin-profile-meta {
+    display: block;
+    overflow: hidden;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
+<<<<<<< HEAD
 
 .admin-profile-name {
     color: var(--gcal-text);
 
+=======
+.admin-profile-name {
+    color: var(--gcal-text);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 13px;
     font-weight: 500;
 }
 
+<<<<<<< HEAD
 
 .admin-profile-meta {
     margin-top: 1px;
 
     color: var(--gcal-text-secondary);
 
+=======
+.admin-profile-meta {
+    margin-top: 1px;
+    color: var(--gcal-text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 11px;
     font-weight: 400;
 }
 
+<<<<<<< HEAD
 
 .admin-role-chip {
     display: block;
 
+=======
+.admin-role-chip {
+    display: block;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     max-width: 100%;
 
     margin-top: 1px;
@@ -581,6 +736,7 @@ $adminSidebarOwnProfileUrl =
     text-overflow: ellipsis;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    MENU AREA
@@ -590,6 +746,14 @@ $adminSidebarOwnProfileUrl =
     min-height: 0;
 
     flex: 1 1 auto;
+=======
+/* =========================================================
+   MENU
+   ========================================================= */
+.admin-sidebar .sidebar-menu {
+    min-height: 0;
+    flex: 1;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     padding: 6px 0 10px;
 
@@ -600,11 +764,15 @@ $adminSidebarOwnProfileUrl =
     scrollbar-color: #c7c9cc transparent;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .sidebar-menu::-webkit-scrollbar {
     width: 6px;
 }
 
+<<<<<<< HEAD
 
 .admin-sidebar .sidebar-menu::-webkit-scrollbar-track {
     background: transparent;
@@ -627,6 +795,13 @@ $adminSidebarOwnProfileUrl =
    MENU CATEGORY
    ========================================================= */
 
+=======
+.admin-sidebar .sidebar-menu::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #c7c9cc;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-menu-category {
     padding: 14px 24px 5px;
 
@@ -634,31 +809,44 @@ $adminSidebarOwnProfileUrl =
 
     font-size: 11px;
     font-weight: 500;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     letter-spacing: .02em;
 
     white-space: nowrap;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    MENU ITEMS
    ========================================================= */
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .menu-item,
 .admin-sidebar .submenu-item {
     position: relative;
 
     width: calc(100% - 12px);
+<<<<<<< HEAD
 
     min-height: 44px;
 
     margin: 1px 12px 1px 0;
 
+=======
+    min-height: 44px;
+
+    margin: 1px 12px 1px 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     padding: 0 18px 0 24px;
 
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
     gap: 14px;
 
@@ -669,10 +857,19 @@ $adminSidebarOwnProfileUrl =
 
     background: transparent;
 
+=======
+    gap: 14px;
+
+    border: 0;
+    border-radius: 0 22px 22px 0 !important;
+
+    background: transparent;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     color: var(--gcal-text-secondary) !important;
 
     font-size: 14px;
     font-weight: 400;
+<<<<<<< HEAD
 
     line-height: 1.25;
 
@@ -684,6 +881,15 @@ $adminSidebarOwnProfileUrl =
 
     cursor: pointer;
 
+=======
+    line-height: 1.25;
+
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     box-shadow: none !important;
 
     transition:
@@ -691,6 +897,7 @@ $adminSidebarOwnProfileUrl =
         color .15s ease;
 }
 
+<<<<<<< HEAD
 
 .admin-sidebar .submenu-item {
     min-height: 40px;
@@ -719,22 +926,47 @@ $adminSidebarOwnProfileUrl =
 }
 
 
+=======
+.admin-sidebar .submenu-item {
+    min-height: 40px;
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.admin-sidebar .menu-item:hover,
+.admin-sidebar .submenu-item:hover {
+    background: var(--gcal-hover) !important;
+    color: var(--gcal-text) !important;
+}
+
+.admin-sidebar .menu-item.active,
+.admin-sidebar .submenu-item.active {
+    background: var(--gcal-blue-active) !important;
+    color: #041e49 !important;
+    font-weight: 500 !important;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .menu-item.active::before,
 .admin-sidebar .submenu-item.active::before {
     display: none !important;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    MENU ICON
    ========================================================= */
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .menu-item > svg,
 .admin-sidebar .menu-item > i,
 .admin-sidebar .submenu-item > svg,
 .admin-sidebar .submenu-item > i {
     width: 20px;
     height: 20px;
+<<<<<<< HEAD
 
     flex: 0 0 20px;
 
@@ -744,6 +976,14 @@ $adminSidebarOwnProfileUrl =
 }
 
 
+=======
+    flex: 0 0 20px;
+
+    color: var(--gcal-icon);
+    stroke-width: 1.9;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .menu-item.active > svg,
 .admin-sidebar .menu-item.active > i,
 .admin-sidebar .submenu-item.active > svg,
@@ -751,6 +991,7 @@ $adminSidebarOwnProfileUrl =
     color: #041e49 !important;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    MENU TEXT
@@ -775,6 +1016,22 @@ $adminSidebarOwnProfileUrl =
     min-width: 20px;
     height: 20px;
 
+=======
+.admin-menu-text {
+    min-width: 0;
+    flex: 1;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+.admin-menu-badge {
+    min-width: 20px;
+    height: 20px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     padding: 0 6px;
 
     display: inline-flex;
@@ -790,22 +1047,32 @@ $adminSidebarOwnProfileUrl =
 
     font-size: 10px;
     font-weight: 500;
+<<<<<<< HEAD
 
     line-height: 1;
 }
 
 
+=======
+    line-height: 1;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-menu-badge.info {
     background: #e8f0fe;
     color: #174ea6;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-menu-badge.danger {
     background: #fce8e6;
     color: var(--gcal-red);
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    DROPDOWN
@@ -814,23 +1081,39 @@ $adminSidebarOwnProfileUrl =
 .admin-dropdown {
     width: 100%;
 
+=======
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+.admin-dropdown {
+    width: 100%;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     display: flex;
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-dropdown-button {
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 
 .admin-dropdown-button .admin-button-content {
     min-width: 0;
 
+=======
+.admin-dropdown-button .admin-button-content {
+    min-width: 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     flex: 1;
 
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
     gap: 14px;
 }
@@ -840,24 +1123,41 @@ $adminSidebarOwnProfileUrl =
     width: 18px !important;
     height: 18px !important;
 
+=======
+    gap: 14px;
+}
+
+.admin-dropdown-arrow {
+    width: 18px !important;
+    height: 18px !important;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     flex: 0 0 18px;
 
     color: var(--gcal-icon);
 
+<<<<<<< HEAD
     transition:
         transform .18s ease;
 }
 
 
+=======
+    transition: transform .18s ease;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-dropdown.open .admin-dropdown-arrow {
     transform: rotate(180deg);
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    SUBMENU
    ========================================================= */
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-submenu {
     max-height: 0;
 
@@ -868,11 +1168,16 @@ $adminSidebarOwnProfileUrl =
     flex-direction: column;
 
     overflow: hidden;
+<<<<<<< HEAD
 
     opacity: 0;
 
     visibility: hidden;
 
+=======
+    opacity: 0;
+    visibility: hidden;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     pointer-events: none;
 
     transform: translateY(-2px);
@@ -883,21 +1188,29 @@ $adminSidebarOwnProfileUrl =
         transform .15s ease;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-dropdown.open .admin-submenu {
     max-height: 280px;
 
     margin: 2px 0 4px 28px;
 
     opacity: 1;
+<<<<<<< HEAD
 
     visibility: visible;
 
+=======
+    visibility: visible;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     pointer-events: auto;
 
     transform: translateY(0);
 }
 
+<<<<<<< HEAD
 
 .admin-dropdown.open
 .admin-submenu
@@ -912,10 +1225,21 @@ $adminSidebarOwnProfileUrl =
    SYSTEM SUMMARY
    ========================================================= */
 
+=======
+.admin-dropdown.open .admin-submenu .submenu-item {
+    width: calc(100% - 12px);
+    margin-right: 12px;
+}
+
+/* =========================================================
+   SYSTEM SUMMARY
+   ========================================================= */
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-system-summary {
     display: none !important;
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    FOOTER / LOGOUT
@@ -932,16 +1256,34 @@ $adminSidebarOwnProfileUrl =
 }
 
 
+=======
+/* =========================================================
+   FOOTER / LOGOUT
+   ========================================================= */
+.admin-sidebar-footer {
+    padding: 6px 0 10px;
+
+    flex: 0 0 auto;
+
+    background: #fff;
+    border-top: 1px solid var(--gcal-border);
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .logout-item {
     color: var(--gcal-red) !important;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .admin-sidebar .logout-item > svg,
 .admin-sidebar .logout-item > i {
     color: var(--gcal-red) !important;
 }
 
+<<<<<<< HEAD
 
 .admin-sidebar .logout-item:hover {
     background: var(--gcal-red-hover) !important;
@@ -1071,16 +1413,89 @@ $adminSidebarOwnProfileUrl =
     }
 }
 
+=======
+.admin-sidebar .logout-item:hover {
+    background: var(--gcal-red-hover) !important;
+    color: var(--gcal-red) !important;
+}
+
+/* =========================================================
+   COLLAPSED - DESKTOP
+   ========================================================= */
+.admin-sidebar.collapsed .admin-sidebar-brand,
+.admin-sidebar.collapsed .admin-profile-copy,
+.admin-sidebar.collapsed .admin-menu-category,
+.admin-sidebar.collapsed .admin-menu-text,
+.admin-sidebar.collapsed .admin-menu-badge,
+.admin-sidebar.collapsed .admin-dropdown-arrow,
+.admin-sidebar.collapsed .admin-submenu,
+.admin-sidebar.collapsed .admin-system-summary {
+    display: none !important;
+}
+
+.admin-sidebar.collapsed .sidebar-header {
+    padding: 0;
+    justify-content: center;
+}
+
+.admin-sidebar.collapsed .admin-sidebar-logo {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+}
+
+.admin-sidebar.collapsed .admin-profile-card {
+    width: 44px !important;
+    height: 44px;
+    min-height: 44px;
+
+    margin: 8px auto 4px;
+    padding: 4px;
+
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+.admin-sidebar.collapsed .admin-avatar {
+    width: 36px;
+    height: 36px;
+}
+
+.admin-sidebar.collapsed .menu-item {
+    width: 44px;
+    min-height: 44px;
+    height: 44px;
+
+    margin: 2px auto;
+    padding: 0;
+
+    justify-content: center;
+
+    border-radius: 50% !important;
+}
+
+.admin-sidebar.collapsed .menu-item > svg,
+.admin-sidebar.collapsed .menu-item > i {
+    margin: 0;
+}
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
 /* =========================================================
    OVERLAY
    ========================================================= */
+<<<<<<< HEAD
 
 .admin-sidebar-overlay {
     position: fixed;
 
     inset: 0;
 
+=======
+.admin-sidebar-overlay {
+    position: fixed;
+    inset: 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     z-index: 999;
 
     display: none;
@@ -1088,6 +1503,7 @@ $adminSidebarOwnProfileUrl =
     background: rgba(32, 33, 36, .32);
 }
 
+<<<<<<< HEAD
 
 .admin-sidebar-overlay.visible {
     display: block;
@@ -1136,10 +1552,42 @@ body:has(.sidebar.admin-sidebar.collapsed)
 @media (max-width: 768px) {
 
     /* Main content */
+=======
+/* =========================================================
+   MAIN CONTENT COMPATIBILITY
+   ========================================================= */
+body:has(.sidebar.admin-sidebar:not(.collapsed)) .main-content {
+    margin-left: 268px;
+    width: calc(100% - 268px);
+}
+
+body:has(.sidebar.admin-sidebar.collapsed) .main-content {
+    margin-left: 74px;
+    width: calc(100% - 74px);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+.admin-sidebar .menu-item:focus-visible,
+.admin-sidebar .submenu-item:focus-visible,
+.admin-sidebar-mobile-close:focus-visible,
+.admin-profile-card:focus-visible {
+    outline: 2px solid var(--gcal-blue);
+    outline-offset: -2px;
+}
+
+/* =========================================================
+   MOBILE DRAWER
+   ========================================================= */
+@media (max-width: 768px) {
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     body:has(.sidebar.admin-sidebar) .main-content,
     body:has(.sidebar.admin-sidebar.collapsed) .main-content,
     body:has(.sidebar.admin-sidebar:not(.collapsed)) .main-content {
         margin-left: 0 !important;
+<<<<<<< HEAD
 
         width: 100% !important;
     }
@@ -1152,6 +1600,13 @@ body:has(.sidebar.admin-sidebar.collapsed)
 
         height: 100vh;
         height: 100dvh;
+=======
+        width: 100% !important;
+    }
+
+    .sidebar.admin-sidebar {
+        width: min(88vw, 288px);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
         z-index: 1000;
 
@@ -1159,14 +1614,18 @@ body:has(.sidebar.admin-sidebar.collapsed)
 
         transform: translateX(-105%);
 
+<<<<<<< HEAD
         display: flex;
         flex-direction: column;
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         box-shadow:
             0 8px 10px rgba(60, 64, 67, .14),
             0 3px 14px rgba(60, 64, 67, .12) !important;
     }
 
+<<<<<<< HEAD
 
     /*
      * Mobile:
@@ -1181,10 +1640,18 @@ body:has(.sidebar.admin-sidebar.collapsed)
 
 
     /* Close */
+=======
+    .sidebar.admin-sidebar.collapsed {
+        width: min(88vw, 288px);
+        transform: translateX(0);
+    }
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .admin-sidebar-mobile-close {
         display: grid;
     }
 
+<<<<<<< HEAD
 
     /* Header */
     .admin-sidebar.collapsed .sidebar-header {
@@ -1198,6 +1665,13 @@ body:has(.sidebar.admin-sidebar.collapsed)
 
 
     /* Brand */
+=======
+    .admin-sidebar.collapsed .sidebar-header {
+        padding: 0 12px 0 16px;
+        justify-content: flex-start;
+    }
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .admin-sidebar.collapsed .admin-sidebar-brand,
     .admin-sidebar.collapsed .admin-profile-copy,
     .admin-sidebar.collapsed .admin-menu-category,
@@ -1205,6 +1679,7 @@ body:has(.sidebar.admin-sidebar.collapsed)
         display: block !important;
     }
 
+<<<<<<< HEAD
 
     .admin-sidebar.collapsed
     .admin-sidebar-brand {
@@ -1231,6 +1706,19 @@ body:has(.sidebar.admin-sidebar.collapsed)
 
         margin: 8px 8px 4px;
 
+=======
+    .admin-sidebar.collapsed .admin-dropdown-arrow,
+    .admin-sidebar.collapsed .admin-menu-badge {
+        display: inline-flex !important;
+    }
+
+    .admin-sidebar.collapsed .admin-profile-card {
+        width: auto !important;
+        height: auto;
+        min-height: 58px;
+
+        margin: 8px 8px 4px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         padding: 7px 12px;
 
         justify-content: flex-start;
@@ -1238,21 +1726,30 @@ body:has(.sidebar.admin-sidebar.collapsed)
         border-radius: 28px;
     }
 
+<<<<<<< HEAD
 
     /* Menu */
     .admin-sidebar.collapsed .menu-item,
     .admin-sidebar.collapsed .submenu-item {
         width: calc(100% - 12px);
 
+=======
+    .admin-sidebar.collapsed .menu-item {
+        width: calc(100% - 12px);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         min-height: 44px;
         height: auto;
 
         margin: 1px 12px 1px 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         padding: 0 18px 0 24px;
 
         justify-content: flex-start;
 
+<<<<<<< HEAD
         border-radius:
             0 22px 22px 0 !important;
     }
@@ -1320,11 +1817,21 @@ body:has(.sidebar.admin-sidebar.collapsed)
        OVERLAY
        ===================================================== */
 
+=======
+        border-radius: 0 22px 22px 0 !important;
+    }
+
+    .admin-sidebar.collapsed .admin-submenu {
+        display: flex !important;
+    }
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .admin-sidebar-overlay.visible {
         display: block;
     }
 }
 
+<<<<<<< HEAD
 
 /* =========================================================
    SMALL MOBILE
@@ -1474,10 +1981,14 @@ body:has(.sidebar.admin-sidebar.collapsed)
 
 @media (prefers-reduced-motion: reduce) {
 
+=======
+@media (prefers-reduced-motion: reduce) {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .sidebar.admin-sidebar,
     .admin-sidebar .menu-item,
     .admin-sidebar .submenu-item,
     .admin-submenu {
+<<<<<<< HEAD
         transition: none !important;
     }
 }
@@ -1485,6 +1996,13 @@ body:has(.sidebar.admin-sidebar.collapsed)
 </style>
 
 
+=======
+        transition: none;
+    }
+}
+</style>
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 <aside class="sidebar admin-sidebar" id="sidebar" aria-label="เมนูผู้ดูแลระบบ">
     <div class="sidebar-header">
         <span class="admin-sidebar-logo" aria-hidden="true">

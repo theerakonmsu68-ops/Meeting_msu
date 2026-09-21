@@ -1,4 +1,5 @@
 /* ==========================================================================
+<<<<<<< HEAD
    🌐 MEETING MANAGEMENT TEMPLATE
    Google Calendar / Material 3 Style
    Shared UI Template — Based on User Management Page
@@ -7,11 +8,16 @@
 
 /* ==========================================================================
    [1] GLOBAL IMPORTS & VARIABLES
+=======
+   MEETING MANAGEMENT TEMPLATE
+   Cleaned from the original user-management page
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Sarabun:wght@400;500;600;700&display=swap');
 
 :root {
+<<<<<<< HEAD
     /* ---------- Google Colors ---------- */
     --google-blue: #1a73e8;
     --google-blue-hover: #1557b0;
@@ -43,6 +49,37 @@
 
 
     /* ---------- Spacing ---------- */
+=======
+    --primary: #1a73e8;
+    --primary-hover: #1557b0;
+    --primary-light: #e8f0fe;
+
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-soft: #f8f9fa;
+    --surface-hover: #f1f3f4;
+
+    --border: #dadce0;
+    --border-hover: #bdc1c6;
+
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --text-muted: #80868b;
+
+    --success: #137333;
+    --success-bg: #e6f4ea;
+
+    --warning: #b06000;
+    --warning-bg: #fef7e0;
+
+    --danger: #d93025;
+    --danger-hover: #b31412;
+    --danger-bg: #fce8e6;
+
+    --purple: #8430ce;
+    --purple-bg: #f3e8fd;
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     --space-2xs: 4px;
     --space-xs: 8px;
     --space-sm: 12px;
@@ -50,6 +87,7 @@
     --space-lg: 24px;
     --space-xl: 32px;
 
+<<<<<<< HEAD
 
     /* ---------- Radius ---------- */
     --radius-sm: 8px;
@@ -64,6 +102,14 @@
    [2] GLOBAL RESET
    ========================================================================== */
 
+=======
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 999px;
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 * {
     box-sizing: border-box;
     margin: 0;
@@ -72,8 +118,13 @@
 
 html,
 body {
+<<<<<<< HEAD
     min-height: 100vh;
     background: #ffffff !important;
+=======
+    min-height: 100%;
+    background: var(--bg);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 body,
@@ -81,6 +132,7 @@ input,
 select,
 textarea,
 button {
+<<<<<<< HEAD
     font-family:
         'Google Sans',
         'Sarabun',
@@ -93,6 +145,11 @@ button {
     line-height: 1.5;
     letter-spacing: 0.015em;
 
+=======
+    font-family: 'Google Sans', 'Sarabun', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     -webkit-font-smoothing: antialiased;
 }
 
@@ -105,12 +162,17 @@ textarea {
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [3] MAIN STRUCTURE
+=======
+   MAIN LAYOUT
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .main-content {
     margin-left: 268px;
     width: calc(100% - 268px);
+<<<<<<< HEAD
 
     min-width: 0;
     min-height: 100vh;
@@ -120,6 +182,14 @@ textarea {
     transition:
         margin-left .25s cubic-bezier(0.4, 0, 0.2, 1),
         width .25s cubic-bezier(0.4, 0, 0.2, 1);
+=======
+    min-width: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    transition:
+        margin-left .25s cubic-bezier(.4, 0, .2, 1),
+        width .25s cubic-bezier(.4, 0, .2, 1);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .main-content.expanded {
@@ -130,16 +200,24 @@ textarea {
 .content-wrapper {
     width: 100%;
     padding: var(--space-xl);
+<<<<<<< HEAD
 
     box-sizing: border-box;
     overflow: hidden;
 
     background: #ffffff;
+=======
+    overflow: hidden;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [4] HEADER
+=======
+   HEADER
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .header {
@@ -211,6 +289,7 @@ textarea {
 }
 
 
+<<<<<<< HEAD
 /* ==========================================================================
    [5] SIDEBAR
    ========================================================================== */
@@ -285,10 +364,13 @@ aside nav a.active {
    [6] HEADER / ICON BUTTON
    ========================================================================== */
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .toggle-btn,
 .modal-close {
     width: 40px;
     height: 40px;
+<<<<<<< HEAD
 
     min-width: 40px;
     min-height: 40px;
@@ -301,30 +383,58 @@ aside nav a.active {
     background: transparent;
 
     color: var(--google-text-secondary);
+=======
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     cursor: pointer;
+<<<<<<< HEAD
 
     box-shadow: none !important;
 
     transition:
         background-color .2s ease,
         color .2s ease;
+=======
+    line-height: 1;
+    box-shadow: none !important;
+
+    transition: background-color .2s ease, color .2s ease;
+}
+
+/* Toggle ของหน้า Meeting ให้ขนาดเท่ากับหน้าแรก */
+.toggle-btn {
+    flex: 0 0 40px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .toggle-btn:hover,
 .modal-close:hover {
+<<<<<<< HEAD
     background: var(--google-gray-surface);
     color: var(--google-text-primary);
+=======
+    background: var(--surface-hover);
+    color: var(--text);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .toggle-btn svg,
 .toggle-btn i {
     width: 24px !important;
     height: 24px !important;
+<<<<<<< HEAD
 }
 
 
@@ -368,12 +478,28 @@ aside nav a.active {
 }
 
 .btn-add svg {
+=======
+    min-width: 24px;
+    min-height: 24px;
+    flex: 0 0 24px;
+    stroke-width: 2;
+}
+
+.modal-close svg,
+.btn-add svg,
+.btn-search svg,
+.btn-clear svg,
+.btn-save svg,
+.btn-empty-add svg,
+.action-buttons svg {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     width: 18px;
     height: 18px;
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [8] FILTER CARD
    ========================================================================== */
 
@@ -389,10 +515,48 @@ aside nav a.active {
     margin-bottom: var(--space-xl);
 
     box-shadow: none;
+=======
+   PRIMARY BUTTON
+   ========================================================================== */
+
+.btn-add {
+    min-height: 44px;
+    padding: 0 var(--space-lg);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--primary);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.btn-add:hover {
+    background: var(--primary-hover);
+}
+
+
+/* ==========================================================================
+   FILTER CARD
+   ========================================================================== */
+
+.filter-card {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-xl);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .filter-card h3 {
     margin-bottom: var(--space-lg);
+<<<<<<< HEAD
 
     display: flex;
     align-items: center;
@@ -403,6 +567,13 @@ aside nav a.active {
     font-weight: 500;
 
     color: var(--google-text-primary);
+=======
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 18px;
+    font-weight: 500;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .filter-card h3 svg {
@@ -413,13 +584,18 @@ aside nav a.active {
 .filter-form {
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
 
     gap: var(--space-lg);
 
+=======
+    gap: var(--space-lg);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     align-items: flex-end;
 }
 
 .form-group {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
 
@@ -473,6 +649,36 @@ aside nav a.active {
 
     box-sizing: border-box;
 
+=======
+    min-width: 190px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.search-group {
+    flex: 2;
+    min-width: 260px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-control,
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--text);
+    outline: none;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     transition:
         border-color .2s ease,
         background-color .2s ease;
@@ -481,18 +687,26 @@ aside nav a.active {
 .form-control,
 .form-group input,
 .form-group select {
+<<<<<<< HEAD
     height: 48px;
 
+=======
+    min-height: 48px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     padding: 0 var(--space-md);
 }
 
 .form-group textarea {
     min-height: 110px;
+<<<<<<< HEAD
 
     padding:
         var(--space-sm)
         var(--space-md);
 
+=======
+    padding: 12px var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     resize: vertical;
 }
 
@@ -506,13 +720,18 @@ aside nav a.active {
 .form-group input:hover,
 .form-group select:hover,
 .form-group textarea:hover {
+<<<<<<< HEAD
     border-color: var(--google-border-hover);
+=======
+    border-color: var(--border-hover);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .form-control:focus,
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
+<<<<<<< HEAD
     outline: none;
 
     border-color: var(--google-blue);
@@ -551,10 +770,24 @@ aside nav a.active {
 .filter-actions {
     display: flex;
     gap: var(--space-md);
+=======
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.filter-actions {
+    display: flex;
+    gap: var(--space-sm);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .btn-search,
 .btn-clear {
+<<<<<<< HEAD
     height: 48px;
 
     padding: 0 var(--space-xl);
@@ -600,15 +833,54 @@ aside nav a.active {
     background: var(--google-blue-light);
 
     border-color: transparent;
+=======
+    min-height: 48px;
+    padding: 0 var(--space-xl);
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-search {
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-search:hover {
+    background: var(--primary-hover);
+}
+
+.btn-clear {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--primary);
+}
+
+.btn-clear:hover {
+    border-color: transparent;
+    background: var(--primary-light);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [11] MEETING TABLE
+=======
+   TABLE
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .table-card {
     width: 100%;
+<<<<<<< HEAD
     max-width: 100%;
 
     overflow: hidden;
@@ -622,27 +894,42 @@ aside nav a.active {
     margin-bottom: var(--space-xl);
 
     box-shadow: none !important;
+=======
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .table-responsive {
     width: 100%;
+<<<<<<< HEAD
 
     overflow-x: auto;
     overflow-y: hidden;
 
+=======
+    overflow-x: auto;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     -webkit-overflow-scrolling: touch;
 }
 
 .table-card table {
     width: 100%;
+<<<<<<< HEAD
 
     min-width: 1050px;
 
+=======
+    min-width: 1050px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     border-collapse: collapse;
 }
 
 .table-card th,
 .table-card td {
+<<<<<<< HEAD
     padding:
         var(--space-md)
         var(--space-lg);
@@ -655,10 +942,18 @@ aside nav a.active {
 
     vertical-align: middle;
 
+=======
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: 1px solid #f1f3f4;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 14px;
 }
 
 .table-card th {
+<<<<<<< HEAD
     background: var(--google-gray-bg) !important;
 
     color: var(--google-text-secondary);
@@ -692,18 +987,48 @@ aside nav a.active {
 /* ==========================================================================
    [12] MEETING TITLE
    ========================================================================== */
+=======
+    background: var(--surface-soft);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.table-card tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table-card tbody tr:hover td {
+    background: var(--surface-soft);
+}
+
+.col-no {
+    width: 80px;
+}
+
+.col-action {
+    width: 150px;
+}
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
 .meeting-title {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
     gap: var(--space-sm);
 
     min-width: 240px;
+=======
+    gap: var(--space-sm);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .meeting-title strong {
     display: block;
+<<<<<<< HEAD
 
     max-width: 280px;
 
@@ -711,11 +1036,17 @@ aside nav a.active {
 
     text-overflow: ellipsis;
 
+=======
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-weight: 600;
 }
 
 .meeting-title small {
     display: block;
+<<<<<<< HEAD
 
     margin-top: 2px;
 
@@ -741,6 +1072,20 @@ aside nav a.active {
 
     color: var(--google-blue);
 
+=======
+    margin-top: 2px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.meeting-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -753,6 +1098,7 @@ aside nav a.active {
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [14] STATUS BADGES
    ========================================================================== */
 
@@ -801,27 +1147,76 @@ aside nav a.active {
 .status-default {
     background: var(--google-gray-surface);
     color: var(--google-text-secondary);
+=======
+   STATUS BADGES
+   ========================================================================== */
+
+.status-badge {
+    min-height: 28px;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-scheduled {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.status-ongoing {
+    background: var(--warning-bg);
+    color: var(--warning);
+}
+
+.status-completed {
+    background: var(--success-bg);
+    color: var(--success);
+}
+
+.status-cancelled {
+    background: var(--danger-bg);
+    color: var(--danger);
+}
+
+.status-default {
+    background: var(--surface-hover);
+    color: var(--text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [15] ACTION BUTTONS
+=======
+   ACTION BUTTONS
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .action-buttons {
     display: flex;
+<<<<<<< HEAD
 
     align-items: center;
 
     justify-content: flex-start;
 
     gap: var(--space-xs);
+=======
+    align-items: center;
+    gap: 6px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .action-buttons button,
 .action-buttons a {
     width: 36px;
     height: 36px;
+<<<<<<< HEAD
 
     padding: 0;
 
@@ -835,10 +1230,22 @@ aside nav a.active {
 
     text-decoration: none;
 
+=======
+    padding: 0;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--border);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     transition:
         background-color .2s ease,
         border-color .2s ease,
         color .2s ease;
+<<<<<<< HEAD
 
     box-shadow: none !important;
 }
@@ -890,15 +1297,50 @@ aside nav a.active {
     background: var(--google-red-bg);
 
     border-color: transparent;
+=======
+}
+
+.btn-view {
+    color: var(--text-secondary);
+}
+
+.btn-view:hover {
+    border-color: transparent;
+    background: var(--surface-hover);
+    color: var(--text);
+}
+
+.btn-edit {
+    color: var(--primary);
+}
+
+.btn-edit:hover {
+    border-color: transparent;
+    background: var(--primary-light);
+}
+
+.btn-delete {
+    color: var(--danger);
+}
+
+.btn-delete:hover {
+    border-color: transparent;
+    background: var(--danger-bg);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [16] EMPTY STATE
+=======
+   EMPTY STATE
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .empty-state {
     min-height: 280px;
+<<<<<<< HEAD
 
     padding: 48px 24px;
 
@@ -908,12 +1350,20 @@ aside nav a.active {
     align-items: center;
     justify-content: center;
 
+=======
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     text-align: center;
 }
 
 .empty-icon {
     width: 64px;
     height: 64px;
+<<<<<<< HEAD
 
     margin-bottom: var(--space-md);
 
@@ -923,6 +1373,12 @@ aside nav a.active {
 
     color: var(--google-blue);
 
+=======
+    margin-bottom: var(--space-md);
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     display: flex;
     align-items: center;
     justify-content: center;
@@ -935,22 +1391,31 @@ aside nav a.active {
 
 .empty-state h4 {
     margin-bottom: 6px;
+<<<<<<< HEAD
 
     font-size: 17px;
 
+=======
+    font-size: 17px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-weight: 600;
 }
 
 .empty-state p {
     margin-bottom: var(--space-lg);
+<<<<<<< HEAD
 
     color: var(--google-text-secondary);
 
+=======
+    color: var(--text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 14px;
 }
 
 .btn-empty-add {
     min-height: 40px;
+<<<<<<< HEAD
 
     padding: 0 18px;
 
@@ -970,15 +1435,31 @@ aside nav a.active {
     font-size: 14px;
     font-weight: 500;
 
+=======
+    padding: 0 18px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--primary);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     cursor: pointer;
 }
 
 .btn-empty-add:hover {
+<<<<<<< HEAD
     background: var(--google-blue-hover);
+=======
+    background: var(--primary-hover);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [17] PAGINATION
    ========================================================================== */
 
@@ -993,11 +1474,24 @@ aside nav a.active {
     margin-top: var(--space-xl);
 
     background: #ffffff;
+=======
+   PAGINATION
+   ========================================================================== */
+
+.pagination-container {
+    padding: var(--space-lg);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .pagination-link {
     width: 36px;
     height: 36px;
+<<<<<<< HEAD
 
     border-radius: 50%;
 
@@ -1030,11 +1524,33 @@ aside nav a.active {
 
     color: var(--google-blue);
 
+=======
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.pagination-link:hover {
+    background: var(--surface-hover);
+}
+
+.pagination-link.active {
+    background: var(--primary-light);
+    color: var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-weight: 700;
 }
 
 .pagination-link.disabled {
     opacity: .35;
+<<<<<<< HEAD
 
     pointer-events: none;
 }
@@ -1042,10 +1558,24 @@ aside nav a.active {
 
 /* ==========================================================================
    [18] MODAL
+=======
+    pointer-events: none;
+}
+
+.pagination-arrow svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ==========================================================================
+   MODAL
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .modal {
     position: fixed;
+<<<<<<< HEAD
 
     inset: 0;
 
@@ -1058,25 +1588,46 @@ aside nav a.active {
 
     display: flex;
 
+=======
+    inset: 0;
+    z-index: 1000;
+    padding: 24px;
+    background: rgba(32, 33, 36, .45);
+    display: flex;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     align-items: center;
     justify-content: center;
 
     opacity: 0;
+<<<<<<< HEAD
 
     pointer-events: none;
 
     transition: opacity .25s ease;
 
     z-index: 1000;
+=======
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .modal.show {
     opacity: 1;
+<<<<<<< HEAD
 
+=======
+    visibility: visible;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     pointer-events: auto;
 }
 
 .modal-box {
+<<<<<<< HEAD
     width: 92%;
 
     max-width: 680px;
@@ -1125,21 +1676,52 @@ aside nav a.active {
 
     justify-content: space-between;
 
+=======
+    width: min(680px, 100%);
+    max-height: 92vh;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(8px) scale(.98);
+    transition: transform .2s ease;
+    box-shadow:
+        0 12px 28px rgba(60, 64, 67, .20),
+        0 8px 12px rgba(60, 64, 67, .12);
+}
+
+.modal.show .modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.modal-header {
+    padding: var(--space-lg) var(--space-xl) var(--space-md);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     gap: var(--space-md);
 }
 
 .modal-header h3 {
     margin: 0;
+<<<<<<< HEAD
 
     font-size: 22px;
 
     font-weight: 400;
 
     color: var(--google-text-primary);
+=======
+    font-size: 22px;
+    font-weight: 500;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .modal-header p {
     margin-top: 4px;
+<<<<<<< HEAD
 
     font-size: 13px;
 
@@ -1168,15 +1750,31 @@ aside nav a.active {
     gap: var(--space-md);
 
     background: #ffffff;
+=======
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.modal-form-body {
+    max-height: calc(92vh - 180px);
+    overflow-y: auto;
+    padding: var(--space-md) var(--space-xl) var(--space-xl);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .form-row {
     display: grid;
+<<<<<<< HEAD
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
     gap: var(--space-md);
+=======
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .modal-form-body > .form-group {
@@ -1192,6 +1790,7 @@ aside nav a.active {
 }
 
 .required {
+<<<<<<< HEAD
     color: var(--google-red);
 }
 
@@ -1270,11 +1869,61 @@ aside nav a.active {
     background: var(--google-blue-light);
 
     border-color: transparent;
+=======
+    color: var(--danger);
+}
+
+.modal-actions {
+    padding: var(--space-md) var(--space-xl) var(--space-lg);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+}
+
+.btn-save,
+.btn-cancel {
+    min-height: 44px;
+    padding: 0 var(--space-lg);
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-save {
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: var(--primary-hover);
+}
+
+.btn-cancel {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--primary);
+}
+
+.btn-cancel:hover {
+    border-color: transparent;
+    background: var(--primary-light);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [22] SCROLLBAR
+=======
+   SCROLLBAR
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .table-responsive::-webkit-scrollbar,
@@ -1285,11 +1934,16 @@ aside nav a.active {
 
 .table-responsive::-webkit-scrollbar-track,
 .modal-form-body::-webkit-scrollbar-track {
+<<<<<<< HEAD
     background: var(--google-gray-bg);
+=======
+    background: var(--surface-soft);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .table-responsive::-webkit-scrollbar-thumb,
 .modal-form-body::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
     background: var(--google-border-hover);
 
     border-radius: 8px;
@@ -1298,10 +1952,15 @@ aside nav a.active {
 .table-responsive::-webkit-scrollbar-thumb:hover,
 .modal-form-body::-webkit-scrollbar-thumb:hover {
     background: var(--google-text-secondary);
+=======
+    background: var(--border-hover);
+    border-radius: var(--radius-pill);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    [23] RESPONSIVE — TABLET
    ========================================================================== */
 
@@ -1317,11 +1976,21 @@ aside nav a.active {
 
     .header-subtitle {
         display: none;
+=======
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .header {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .content-wrapper {
         padding: var(--space-lg);
     }
+<<<<<<< HEAD
 }
 
 
@@ -1344,6 +2013,18 @@ aside nav a.active {
     .main-content.expanded {
         margin-left: 0 !important;
 
+=======
+
+    .header-subtitle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content,
+    .main-content.expanded {
+        margin-left: 0 !important;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         width: 100% !important;
     }
 
@@ -1353,6 +2034,7 @@ aside nav a.active {
 
     .header {
         min-height: 64px;
+<<<<<<< HEAD
 
         padding:
             10px
@@ -1360,11 +2042,19 @@ aside nav a.active {
     }
 
     .header-left {
+=======
+        padding: 10px var(--space-sm);
+    }
+
+    .header-left {
+        min-width: 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         gap: var(--space-xs);
     }
 
     .header-left h2 {
         max-width: 150px;
+<<<<<<< HEAD
 
         font-size: 16px;
 
@@ -1383,6 +2073,17 @@ aside nav a.active {
             var(--space-md);
 
         font-size: 14px;
+=======
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+    }
+
+    .btn-add {
+        min-height: 40px;
+        padding: 0 var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .filter-card {
@@ -1394,10 +2095,14 @@ aside nav a.active {
     }
 
     .form-group,
+<<<<<<< HEAD
     .form-group.search-group,
     .search-group {
         width: 100%;
 
+=======
+    .search-group {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         min-width: 100%;
     }
 
@@ -1408,8 +2113,11 @@ aside nav a.active {
     .btn-search,
     .btn-clear {
         flex: 1;
+<<<<<<< HEAD
 
         justify-content: center;
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .modal {
@@ -1417,9 +2125,13 @@ aside nav a.active {
     }
 
     .modal-box {
+<<<<<<< HEAD
         width: 95%;
 
         border-radius: 20px;
+=======
+        border-radius: 18px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .modal-header,
@@ -1432,6 +2144,29 @@ aside nav a.active {
     .form-row {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
+=======
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: var(--space-sm);
+    }
+
+    .filter-card {
+        padding: var(--space-md);
+    }
+
+    .header-left h2 {
+        max-width: 110px;
+        font-size: 14px;
+    }
+
+    .btn-add {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     .modal-actions {
         flex-direction: column-reverse;
@@ -1440,6 +2175,7 @@ aside nav a.active {
     .btn-save,
     .btn-cancel {
         width: 100%;
+<<<<<<< HEAD
 
         justify-content: center;
     }
@@ -1482,5 +2218,7 @@ aside nav a.active {
 
     .modal-box {
         border-radius: 18px;
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 }

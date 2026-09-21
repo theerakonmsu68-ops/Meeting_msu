@@ -1,11 +1,16 @@
 /* ==========================================================================
+<<<<<<< HEAD
    MEETING FORM
    Google Calendar / Material 3 Style
    ใช้เป็น Template กลางสำหรับหน้า Create / Edit Meeting
+=======
+   CREATE / EDIT MEETING FORM
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Sarabun:wght@400;500;600;700&display=swap');
 
+<<<<<<< HEAD
 
 /* ==========================================================================
    1. GLOBAL VARIABLES
@@ -40,6 +45,27 @@
     --google-purple-light: #f3e8fd;
 
     --space-2xs: 4px;
+=======
+:root {
+    --primary: #1a73e8;
+    --primary-hover: #1557b0;
+    --primary-light: #e8f0fe;
+
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --surface-soft: #f8f9fa;
+    --surface-hover: #f1f3f4;
+
+    --border: #dadce0;
+    --border-hover: #bdc1c6;
+
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --text-muted: #80868b;
+
+    --danger: #d93025;
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     --space-xs: 8px;
     --space-sm: 12px;
     --space-md: 16px;
@@ -49,6 +75,7 @@
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
+<<<<<<< HEAD
     --radius-xl: 24px;
     --radius-pill: 999px;
 }
@@ -68,6 +95,13 @@ html,
 body {
     min-height: 100vh;
     background: #ffffff !important;
+=======
+    --radius-pill: 999px;
+}
+
+* {
+    box-sizing: border-box;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 body,
@@ -75,6 +109,7 @@ input,
 select,
 textarea,
 button {
+<<<<<<< HEAD
     font-family:
         'Google Sans',
         'Sarabun',
@@ -102,11 +137,19 @@ button {
 
 a {
     color: inherit;
+=======
+    font-family: 'Google Sans', 'Sarabun', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    3. MAIN LAYOUT
+=======
+   LAYOUT
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .main-content {
@@ -114,9 +157,13 @@ a {
     width: calc(100% - 268px);
     min-width: 0;
     min-height: 100vh;
+<<<<<<< HEAD
 
     background: #ffffff;
 
+=======
+    background: var(--bg);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     transition:
         margin-left .25s cubic-bezier(.4, 0, .2, 1),
         width .25s cubic-bezier(.4, 0, .2, 1);
@@ -128,6 +175,7 @@ a {
 }
 
 .content-wrapper {
+<<<<<<< HEAD
     width: 100%;
     max-width: 1180px;
 
@@ -135,10 +183,16 @@ a {
     padding: var(--space-xl);
 
     background: #ffffff;
+=======
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: var(--space-xl);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    4. SIDEBAR
    ========================================================================== */
 
@@ -205,21 +259,35 @@ aside nav a.active {
 
 /* ==========================================================================
    5. HEADER
+=======
+   HEADER
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .header {
     display: flex;
+<<<<<<< HEAD
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
+=======
+    justify-content: space-between;
+    align-items: center;
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     height: 64px;
     min-height: 64px;
 
     padding: 0 var(--space-xl);
 
+<<<<<<< HEAD
     background: #ffffff;
     border-bottom: 1px solid var(--google-border);
+=======
+    border-bottom: 1px solid var(--google-border);
+    background: #ffffff;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     gap: var(--space-md);
 }
@@ -227,9 +295,15 @@ aside nav a.active {
 .header-left {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
     min-width: 0;
     gap: var(--space-md);
+=======
+    gap: var(--space-md);
+
+    min-width: 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .header-title {
@@ -243,26 +317,43 @@ aside nav a.active {
 .header-left h2 {
     margin: 0;
 
+<<<<<<< HEAD
     color: var(--google-text-primary);
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 18px;
     font-weight: 500;
     line-height: 1.25;
 
+<<<<<<< HEAD
+=======
+    color: var(--google-text-primary);
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .header-subtitle {
+<<<<<<< HEAD
     margin-top: 2px;
 
     color: var(--google-text-secondary);
+=======
+    margin: 2px 0 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     font-size: 12px;
     font-weight: 400;
     line-height: 1.3;
 
+<<<<<<< HEAD
+=======
+    color: var(--google-text-secondary);
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -271,6 +362,7 @@ aside nav a.active {
 .header-right {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
     gap: var(--space-sm);
     flex-shrink: 0;
@@ -283,24 +375,41 @@ aside nav a.active {
 
 .toggle-btn,
 .modal-close {
+=======
+    gap: var(--space-sm);
+
+    flex-shrink: 0;
+}
+
+.toggle-btn {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     width: 40px;
     height: 40px;
     min-width: 40px;
     min-height: 40px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     padding: 0;
 
     border: 0;
     border-radius: 50%;
+<<<<<<< HEAD
 
     background: transparent;
     color: var(--google-text-secondary);
+=======
+    background: transparent;
+    color: var(--text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     cursor: pointer;
+<<<<<<< HEAD
 
     box-shadow: none !important;
 
@@ -319,21 +428,68 @@ aside nav a.active {
     color: var(--google-text-primary);
 }
 
+=======
+    flex: 0 0 40px;
+    line-height: 1;
+
+    box-shadow: none !important;
+    transition: background-color .2s ease;
+}
+
+.toggle-btn:hover {
+    background: var(--surface-hover);
+}
+
+.btn-back {
+    min-height: 40px;
+    padding: 0 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: #fff;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-back:hover {
+    background: var(--primary-light);
+    border-color: transparent;
+}
+
+.btn-back svg,
+.btn-save svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Toggle icon ให้เท่ากับหน้าแรก */
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .toggle-btn svg,
 .toggle-btn i {
     width: 24px !important;
     height: 24px !important;
+<<<<<<< HEAD
 
     min-width: 24px;
     min-height: 24px;
 
     flex: 0 0 24px;
 
+=======
+    min-width: 24px;
+    min-height: 24px;
+    flex: 0 0 24px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     stroke-width: 2;
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    7. BACK BUTTON
    ========================================================================== */
 
@@ -406,11 +562,30 @@ aside nav a.active {
     gap: var(--space-md);
 
     margin-bottom: var(--space-xl);
+=======
+   FORM CARD
+   ========================================================================== */
+
+.form-card {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-xl);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.section-header {
+    margin-bottom: var(--space-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .section-icon {
     width: 44px;
     height: 44px;
+<<<<<<< HEAD
     min-width: 44px;
 
     border-radius: 50%;
@@ -418,6 +593,12 @@ aside nav a.active {
     background: var(--google-blue-light);
     color: var(--google-blue);
 
+=======
+    flex: 0 0 44px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     display: flex;
     align-items: center;
     justify-content: center;
@@ -430,25 +611,36 @@ aside nav a.active {
 
 .section-header h3 {
     margin: 0;
+<<<<<<< HEAD
 
     color: var(--google-text-primary);
 
     font-size: 18px;
     font-weight: 600;
     line-height: 1.4;
+=======
+    font-size: 18px;
+    font-weight: 600;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .section-header p {
     margin: 3px 0 0;
+<<<<<<< HEAD
 
     color: var(--google-text-secondary);
 
     font-size: 13px;
     line-height: 1.5;
+=======
+    color: var(--text-secondary);
+    font-size: 13px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    10. FORM GROUP
    ========================================================================== */
 
@@ -458,6 +650,12 @@ aside nav a.active {
 
     gap: var(--space-xs);
 
+=======
+   FORM CONTROLS
+   ========================================================================== */
+
+.form-group {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     margin-bottom: var(--space-lg);
 }
 
@@ -468,6 +666,7 @@ aside nav a.active {
 .form-group label,
 .status-control-container > label {
     display: block;
+<<<<<<< HEAD
 
     color: var(--google-text-secondary);
 
@@ -486,10 +685,23 @@ aside nav a.active {
    11. FORM CONTROLS
    ========================================================================== */
 
+=======
+    margin-bottom: var(--space-xs);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.required {
+    color: var(--danger);
+}
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 .form-control,
 .file-control {
     width: 100%;
     min-height: 48px;
+<<<<<<< HEAD
 
     padding: 0 var(--space-md);
 
@@ -507,23 +719,45 @@ aside nav a.active {
         border-color .2s ease,
         box-shadow .2s ease,
         background-color .2s ease;
+=======
+    padding: 0 var(--space-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .form-control:hover,
 .file-control:hover {
+<<<<<<< HEAD
     border-color: var(--google-border-hover);
+=======
+    border-color: var(--border-hover);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .form-control:focus,
 .file-control:focus {
+<<<<<<< HEAD
     border-color: var(--google-blue);
     box-shadow: 0 0 0 1px var(--google-blue);
+=======
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .form-control::placeholder {
     color: #9aa0a6;
 }
 
+<<<<<<< HEAD
 textarea.form-control {
     min-height: 120px;
 
@@ -569,15 +803,38 @@ select.form-control {
         minmax(180px, .7fr);
 
     gap: var(--space-lg);
+=======
+select.form-control {
+    cursor: pointer;
+}
+
+.form-grid-2,
+.form-grid-report {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.form-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-grid-report {
+    grid-template-columns: minmax(0, 2fr) minmax(180px, .7fr);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    13. STATUS CONTROL
+=======
+   STATUS
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .status-control-container {
     padding: var(--space-md);
+<<<<<<< HEAD
 
     margin-bottom: var(--space-lg);
 
@@ -589,10 +846,17 @@ select.form-control {
 
 .status-control-container select {
     width: 100%;
+=======
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    14. STATUS VISUAL
    ========================================================================== */
 
@@ -653,20 +917,37 @@ select.form-control {
 
     background: var(--google-gray-bg);
 
+=======
+   UPLOAD
+   ========================================================================== */
+
+.upload-zone {
+    min-height: 190px;
+    padding: var(--space-xl);
+    border: 2px dashed var(--border-hover);
+    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
 
     text-align: center;
 
     cursor: pointer;
 
+=======
+    text-align: center;
+    cursor: pointer;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     transition:
         border-color .2s ease,
         background-color .2s ease;
 }
 
+<<<<<<< HEAD
 .upload-zone:hover,
 .upload-zone.dragover {
     border-color: var(--google-blue);
@@ -681,12 +962,25 @@ select.form-control {
 
     opacity: 0;
 
+=======
+.upload-zone:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.upload-zone input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     pointer-events: none;
 }
 
 .upload-icon {
     width: 52px;
     height: 52px;
+<<<<<<< HEAD
 
     margin-bottom: var(--space-sm);
 
@@ -695,6 +989,12 @@ select.form-control {
     background: #ffffff;
     color: var(--google-blue);
 
+=======
+    margin-bottom: var(--space-sm);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     display: flex;
     align-items: center;
     justify-content: center;
@@ -706,30 +1006,44 @@ select.form-control {
 }
 
 .upload-zone strong {
+<<<<<<< HEAD
     color: var(--google-blue);
 
     font-size: 15px;
     font-weight: 600;
+=======
+    color: var(--primary);
+    font-size: 15px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .upload-zone span {
     margin-top: 3px;
+<<<<<<< HEAD
 
     color: var(--google-text-secondary);
 
+=======
+    color: var(--text-secondary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 14px;
 }
 
 .upload-zone small {
     margin-top: var(--space-sm);
+<<<<<<< HEAD
 
     color: var(--google-text-muted);
 
+=======
+    color: var(--text-muted);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 12px;
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    16. FILE CONTROL
    ========================================================================== */
 
@@ -771,10 +1085,19 @@ select.form-control {
     display: flex;
     flex-direction: column;
 
+=======
+   AGENDA
+   ========================================================================== */
+
+#agenda-container {
+    display: flex;
+    flex-direction: column;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     gap: var(--space-md);
 }
 
 .agenda-card {
+<<<<<<< HEAD
     width: 100%;
 
     padding: var(--space-lg);
@@ -797,6 +1120,22 @@ select.form-control {
 .agenda-card-header strong {
     color: var(--google-text-primary);
 
+=======
+    padding: var(--space-lg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: #fff;
+}
+
+.agenda-card-header {
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.agenda-card-header strong {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 15px;
     font-weight: 600;
 }
@@ -804,6 +1143,7 @@ select.form-control {
 .agenda-number {
     width: 32px;
     height: 32px;
+<<<<<<< HEAD
     min-width: 32px;
 
     border-radius: 50%;
@@ -815,10 +1155,20 @@ select.form-control {
     align-items: center;
     justify-content: center;
 
+=======
+    flex: 0 0 32px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     font-size: 13px;
     font-weight: 700;
 }
 
+<<<<<<< HEAD
 
 /* ==========================================================================
    18. EMPTY AGENDA
@@ -843,18 +1193,45 @@ select.form-control {
 
     gap: var(--space-sm);
 
+=======
+.file-control {
+    padding: 10px 12px;
+    height: auto;
+}
+
+.empty-agenda {
+    padding: 48px var(--space-lg);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface-soft);
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     text-align: center;
 }
 
 .empty-agenda svg {
     width: 30px;
     height: 30px;
+<<<<<<< HEAD
 
     color: var(--google-text-muted);
+=======
+}
+
+
+/* CKEditor */
+.ck-editor__editable_inline {
+    min-height: 150px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    19. CKEDITOR
    ========================================================================== */
 
@@ -975,12 +1352,16 @@ select.form-control {
 
 /* ==========================================================================
    20. FORM ACTIONS
+=======
+   ACTIONS
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
    ========================================================================== */
 
 .form-actions {
     position: sticky;
     bottom: 0;
     z-index: 5;
+<<<<<<< HEAD
 
     display: flex;
     align-items: center;
@@ -997,11 +1378,22 @@ select.form-control {
     border-radius: var(--radius-lg);
 
     backdrop-filter: blur(8px);
+=======
+    margin-top: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, .96);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .btn-save,
 .btn-cancel {
     min-height: 46px;
+<<<<<<< HEAD
 
     padding: 0 var(--space-xl);
 
@@ -1024,10 +1416,23 @@ select.form-control {
         background-color .2s ease,
         border-color .2s ease,
         color .2s ease;
+=======
+    padding: 0 var(--space-xl);
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .btn-save {
     border: 0;
+<<<<<<< HEAD
 
     background: var(--google-blue);
     color: #ffffff;
@@ -1042,10 +1447,25 @@ select.form-control {
 
     background: #ffffff;
     color: var(--google-blue);
+=======
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: var(--primary-hover);
+}
+
+.btn-cancel {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--primary);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 .btn-cancel:hover {
     border-color: transparent;
+<<<<<<< HEAD
     background: var(--google-blue-light);
 }
 
@@ -1053,10 +1473,14 @@ select.form-control {
 .btn-cancel svg {
     width: 18px;
     height: 18px;
+=======
+    background: var(--primary-light);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
 }
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    21. FOCUS / ACCESSIBILITY
    ========================================================================== */
 
@@ -1242,19 +1666,29 @@ aside::-webkit-scrollbar-thumb:hover,
             var(--space-lg);
     }
 
+=======
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .content-wrapper {
         padding: var(--space-lg);
     }
 
+<<<<<<< HEAD
     .header-subtitle {
         display: none;
     }
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .form-grid-report {
         grid-template-columns: 1fr;
     }
 }
 
+<<<<<<< HEAD
 
 /* ==========================================================================
    25. MOBILE - 768PX
@@ -1271,6 +1705,9 @@ aside::-webkit-scrollbar-thumb:hover,
             transform .3s ease;
     }
 
+=======
+@media (max-width: 768px) {
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .main-content,
     .main-content.expanded {
         margin-left: 0 !important;
@@ -1278,6 +1715,7 @@ aside::-webkit-scrollbar-thumb:hover,
     }
 
     .header {
+<<<<<<< HEAD
         height: 64px;
         min-height: 64px;
 
@@ -1298,12 +1736,22 @@ aside::-webkit-scrollbar-thumb:hover,
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+=======
+        padding: 10px var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .content-wrapper {
         padding: var(--space-md);
     }
 
+<<<<<<< HEAD
+=======
+    .header-subtitle {
+        display: none;
+    }
+
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     .form-card {
         padding: var(--space-lg);
     }
@@ -1311,12 +1759,16 @@ aside::-webkit-scrollbar-thumb:hover,
     .form-grid-2,
     .form-grid-report {
         grid-template-columns: 1fr;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         gap: 0;
     }
 
     .form-actions {
         position: static;
+<<<<<<< HEAD
 
         border-radius: var(--radius-md);
     }
@@ -1370,10 +1822,19 @@ aside::-webkit-scrollbar-thumb:hover,
     .header-left h2 {
         max-width: 110px;
         font-size: 14px;
+=======
+    }
+}
+
+@media (max-width: 520px) {
+    .header-left h2 {
+        font-size: 16px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .btn-back {
         width: 40px;
+<<<<<<< HEAD
         min-width: 40px;
 
         padding: 0;
@@ -1382,6 +1843,12 @@ aside::-webkit-scrollbar-thumb:hover,
 
         overflow: hidden;
 
+=======
+        padding: 0;
+        justify-content: center;
+        overflow: hidden;
+        white-space: nowrap;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
         font-size: 0;
     }
 
@@ -1390,6 +1857,7 @@ aside::-webkit-scrollbar-thumb:hover,
         height: 18px;
     }
 
+<<<<<<< HEAD
     .form-card {
         padding: var(--space-md);
 
@@ -1422,12 +1890,23 @@ aside::-webkit-scrollbar-thumb:hover,
 
     .agenda-card {
         padding: var(--space-md);
+=======
+    .content-wrapper {
+        padding: var(--space-sm);
+    }
+
+    .form-card {
+        padding: var(--space-md);
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .form-actions {
         flex-direction: column-reverse;
+<<<<<<< HEAD
 
         padding: var(--space-md);
+=======
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 
     .btn-save,
@@ -1438,6 +1917,7 @@ aside::-webkit-scrollbar-thumb:hover,
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    27. MOBILE - 480PX
    ========================================================================== */
 
@@ -1490,5 +1970,85 @@ aside::-webkit-scrollbar-thumb:hover,
         padding: 12px 14px;
 
         font-size: 14px;
+=======
+   ACADEMIC RICH TEXT EDITOR
+   ========================================================================== */
+
+.editor-help {
+    display: block;
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ให้ Editor ดูเป็นฟอร์มเอกสารระดับมหาวิทยาลัย */
+.agenda-card .ck.ck-editor {
+    width: 100%;
+}
+
+.agenda-card .ck.ck-toolbar {
+    padding: 6px 8px;
+    border-color: var(--border);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    background: var(--surface-soft);
+}
+
+.agenda-card .ck.ck-editor__main > .ck-editor__editable {
+    min-height: 220px;
+    padding: 18px 22px;
+    border-color: var(--border);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    background: #fff;
+    font-family: 'Sarabun', 'Google Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text);
+}
+
+.agenda-card .ck.ck-editor__main > .ck-editor__editable:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.agenda-card .ck-content h2 {
+    margin: 1.25em 0 .6em;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.agenda-card .ck-content h3 {
+    margin: 1.1em 0 .5em;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.agenda-card .ck-content p {
+    margin: 0 0 .8em;
+}
+
+.agenda-card .ck-content ul,
+.agenda-card .ck-content ol {
+    padding-left: 28px;
+    margin: .5em 0 1em;
+}
+
+.agenda-card .ck-content blockquote {
+    margin: 1em 0;
+    padding: 10px 16px;
+    border-left: 4px solid var(--primary);
+    background: var(--primary-light);
+    font-style: normal;
+}
+
+.agenda-card .ck-content table {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .agenda-card .ck.ck-editor__main > .ck-editor__editable {
+        min-height: 180px;
+        padding: 14px 16px;
+>>>>>>> 8ac1799c853732bc3e42b61204d89d693409b4a7
     }
 }
