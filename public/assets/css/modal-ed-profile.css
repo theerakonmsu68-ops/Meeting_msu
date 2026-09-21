@@ -1,0 +1,509 @@
+/* ==========================================================================
+   🌐 [1. GLOBAL IMPORTS & VARIABLES - GOOGLE MATERIAL DESIGN 3]
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Sarabun:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Google Material Colors */
+    --google-blue: #1a73e8;
+    --google-blue-hover: #1557b0;
+    --google-blue-light: #e8f0fe;
+    --google-gray-bg: #f8f9fa;
+    --google-gray-surface: #f1f3f4;
+    --google-border: #dadce0;
+    --google-border-hover: #bdc1c6;
+    --google-text-primary: #202124;
+    --google-text-secondary: #5f6368;
+
+    /* Semantic Colors */
+    --google-green: #1e8e3e;
+    --google-green-light: #e6f4ea;
+    --google-red: #d93025;
+    --google-red-light: #fce8e6;
+
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+}
+
+/* ==========================================================================
+   2. MODAL BACKDROP & CONTAINER
+   ========================================================================== */
+.p-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    padding: var(--space-md);
+    background: rgba(32, 33, 36, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1), visibility 0.25s cubic-bezier(0, 0, 0.2, 1);
+    z-index: 99999;
+    box-sizing: border-box;
+    font-family: 'Google Sans', 'Sarabun', 'Roboto', -apple-system, sans-serif;
+}
+
+.p-modal-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.p-modal-card {
+    width: min(100%, 620px);
+    max-height: calc(100vh - 40px);
+    background: #ffffff;
+    border: none;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14) !important;
+    transform: scale(0.95);
+    transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.p-modal-backdrop.show .p-modal-card {
+    transform: scale(1);
+}
+
+/* ==========================================================================
+   3. MODAL HEADER & CLOSE BUTTON
+   ========================================================================== */
+.p-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-lg) var(--space-md) var(--space-lg);
+    color: var(--google-text-primary);
+    background: #ffffff;
+    border-bottom: 1px solid var(--google-gray-surface);
+}
+
+.p-modal-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-width: 0;
+}
+
+.p-modal-heading-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--google-blue-light);
+    color: var(--google-blue);
+    flex: 0 0 auto;
+}
+
+.p-modal-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--google-text-primary);
+}
+
+.p-modal-subtitle {
+    margin: 2px 0 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--google-text-secondary);
+}
+
+.p-close-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    color: var(--google-text-secondary);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.p-close-btn:hover {
+    background: var(--google-gray-surface);
+    color: var(--google-text-primary);
+}
+
+/* ==========================================================================
+   4. MODAL BODY & PROFILE SECTION
+   ========================================================================== */
+.p-modal-body {
+    max-height: calc(100vh - 140px);
+    padding: var(--space-lg);
+    overflow-y: auto;
+    background: #ffffff;
+}
+
+.p-modal-body::-webkit-scrollbar { height: 6px; width: 6px; }
+.p-modal-body::-webkit-scrollbar-track { background: var(--google-gray-bg); }
+.p-modal-body::-webkit-scrollbar-thumb { background: var(--google-border); border-radius: 8px; }
+
+.p-profile-top {
+    display: grid;
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: var(--space-lg);
+    align-items: center;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    background: var(--google-gray-bg);
+    border: 1px solid var(--google-border);
+    border-radius: 20px;
+}
+
+.p-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-avatar-circle {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.p-avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--google-border);
+    border-radius: 50%;
+    background: var(--google-gray-surface);
+    box-sizing: border-box;
+}
+
+.p-upload-btn {
+    margin-top: var(--space-sm);
+    padding: 6px var(--space-sm);
+    border: 1px solid var(--google-border);
+    border-radius: 16px;
+    color: var(--google-blue);
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.p-upload-btn:hover {
+    background: var(--google-blue-light);
+    border-color: transparent;
+}
+
+.p-profile-summary {
+    min-width: 0;
+}
+
+.p-profile-name {
+    margin: 0 0 4px;
+    color: var(--google-text-primary);
+    font-size: 18px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.p-profile-meta {
+    margin: 0;
+    color: var(--google-text-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.p-status-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: var(--space-sm);
+}
+
+.p-chip {
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: var(--google-gray-surface);
+    color: var(--google-text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid transparent;
+}
+
+.p-chip.is-active {
+    color: var(--google-green);
+    background: var(--google-green-light);
+    border-color: #ceead6;
+}
+
+.p-chip.is-inactive {
+    color: var(--google-red);
+    background: var(--google-red-light);
+    border-color: #fad2cf;
+}
+
+/* ==========================================================================
+   5. SECTIONS & FORM ELEMENTS
+   ========================================================================== */
+.p-section {
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    background: #ffffff;
+    border: 1px solid var(--google-border);
+    border-radius: 20px;
+}
+
+.p-section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin: 0 0 var(--space-md);
+    color: var(--google-text-primary);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.p-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.p-group {
+    min-width: 0;
+}
+
+.p-group.p-full {
+    grid-column: 1 / -1;
+}
+
+.p-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--google-text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.p-input-wrap {
+    position: relative;
+}
+
+.p-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    color: var(--google-text-secondary);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.p-input {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px var(--space-md) 10px 40px;
+    border: 1px solid var(--google-border);
+    border-radius: 8px;
+    color: var(--google-text-primary);
+    background: #ffffff;
+    font: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.p-input:hover {
+    border-color: var(--google-border-hover);
+}
+
+.p-input:focus {
+    outline: none;
+    border-color: var(--google-blue);
+    border-width: 2px;
+    padding-left: 39px;
+}
+
+.p-input[readonly],
+.p-input:disabled {
+    color: var(--google-text-secondary);
+    background: var(--google-gray-bg);
+    border-color: var(--google-border);
+    cursor: default;
+}
+
+.p-note {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--google-text-secondary);
+    background: var(--google-blue-light);
+    border: 1px solid #d2e3fc;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.p-form-message {
+    display: none;
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.p-form-message.show {
+    display: block;
+}
+
+.p-form-message.success {
+    color: var(--google-green);
+    background: var(--google-green-light);
+    border: 1px solid #ceead6;
+}
+
+.p-form-message.error {
+    color: var(--google-red);
+    background: var(--google-red-light);
+    border: 1px solid #fad2cf;
+}
+
+/* ==========================================================================
+   6. ACTIONS & BUTTONS
+   ========================================================================== */
+.p-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.p-btn {
+    min-height: 48px;
+    padding: 0 var(--space-lg);
+    border: none;
+    border-radius: 24px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.p-btn-secondary {
+    color: var(--google-blue);
+    background: #ffffff;
+    border: 1px solid var(--google-border);
+}
+
+.p-btn-secondary:hover {
+    background: var(--google-blue-light);
+    border-color: transparent;
+}
+
+.p-btn-submit {
+    color: #ffffff;
+    background: var(--google-blue);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+.p-btn-submit:hover {
+    background: var(--google-blue-hover);
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+}
+
+.p-btn:active {
+    transform: scale(0.97);
+}
+
+.p-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.p-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: p-spin 0.75s linear infinite;
+}
+
+@keyframes p-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 640px) {
+    .p-modal-backdrop {
+        padding: var(--space-xs);
+        align-items: flex-end;
+    }
+
+    .p-modal-card {
+        max-height: calc(100vh - 20px);
+        border-radius: 28px 28px 16px 16px;
+    }
+
+    .p-modal-body {
+        max-height: calc(100vh - 110px);
+        padding: var(--space-md);
+    }
+
+    .p-profile-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: var(--space-md);
+    }
+
+    .p-status-row {
+        justify-content: center;
+    }
+
+    .p-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .p-group.p-full {
+        grid-column: auto;
+    }
+
+    .p-actions {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: var(--space-xs);
+    }
+
+    .p-actions .p-btn {
+        width: 100%;
+    }
+}

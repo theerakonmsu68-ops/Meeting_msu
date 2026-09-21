@@ -1,0 +1,6 @@
+# User uploaded files
+uploads/
+public/uploads/*
+!public/uploads/.htaccess
+!public/uploads/avatars/.htaccess
+!public/uploads/meetings/.htaccess

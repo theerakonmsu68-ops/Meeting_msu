@@ -1,0 +1,17 @@
+.git
+.gitignore
+.vscode
+.idea
+
+_path_backup_before_fix
+fix_paths_once.php
+
+.env
+.env.*
+!.env.example
+
+*.zip
+*.log
+
+.DS_Store
+Thumbs.db
